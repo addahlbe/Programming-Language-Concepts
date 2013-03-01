@@ -1,0 +1,180 @@
+ephesus:feb-28-ocaml-datatypes$ ocaml
+        Objective Caml version 3.12.0
+
+# 3+3;;
+- : int = 6
+# 3. +. 3.;;
+- : float = 6.
+# let x = 3*3*3;;
+val x : int = 27
+# x;;
+- : int = 27
+# let y = x;;
+val y : int = 27
+# let x = 300;;
+val x : int = 300
+# y;;
+- : int = 27
+# let x = 100;;
+val x : int = 100
+# x;;
+- : int = 100
+# 100;;
+- : int = 100
+# let f () = x;;
+val f : unit -> int = <fun>
+# f();;
+- : int = 100
+# let x = 12;;
+val x : int = 12
+# f();;
+- : int = 100
+# let f() = x;;
+val f : unit -> int = <fun>
+# f();;
+- : int = 12
+# let f() = f();;
+val f : unit -> int = <fun>
+# f();;
+- : int = 12
+# let y = f();;
+val y : int = 12
+# let f() = f();;
+val f : unit -> int = <fun>
+# f();;
+- : int = 12
+# let x = 123;;
+val x : int = 123
+# let x = x;;
+val x : int = 123
+# let x = x;;
+val x : int = 123
+# f;;
+- : unit -> int = <fun>
+# let f() = x;;
+val f : unit -> int = <fun>
+# ();;
+- : unit = ()
+# f();;
+- : int = 123
+# let x = 10;;
+val x : int = 10
+# let f() = x;;
+val f : unit -> int = <fun>
+# let x = 20;;
+val x : int = 20
+# let g() = x;;
+val g : unit -> int = <fun>
+# f();;
+- : int = 10
+# <fun>;;
+Characters 0-1:
+  <fun>;;
+  ^
+Error: Syntax error
+# let f x = x;;
+val f : 'a -> 'a = <fun>
+# f 3;;
+- : int = 3
+# f 3.;;
+- : float = 3.
+# let f x = 3;;
+val f : 'a -> int = <fun>
+# let f x = x + x;;
+val f : int -> int = <fun>
+# let f x = if x then 1 else 2;;
+val f : bool -> int = <fun>
+# let f x = if x then 1 else 2.0 ;;
+Characters 27-30:
+  let f x = if x then 1 else 2.0 ;;
+                             ^^^
+Error: This expression has type float but an expression was expected of type
+         int
+# let f x = if x then 2.0 else 1 ;;
+Characters 29-30:
+  let f x = if x then 2.0 else 1 ;;
+                               ^
+Error: This expression has type int but an expression was expected of type
+         float
+# let f x y = x + y;;
+val f : int -> int -> int = <fun>
+# let f (x, y) = x + y;;
+val f : int * int -> int = <fun>
+# (1,2);;
+- : int * int = (1, 2)
+# f(1,2);;
+- : int = 3
+# (1,2);;
+- : int * int = (1, 2)
+# let x = (1,2);;
+val x : int * int = (1, 2)
+# x;;
+- : int * int = (1, 2)
+# fst x;;
+- : int = 1
+# snd x;
+  ;;
+- : int = 2
+# snd x;;
+- : int = 2
+# x;;
+- : int * int = (1, 2)
+# let (x1,x2) = x;;
+val x1 : int = 1
+val x2 : int = 2
+# x1;;
+- : int = 1
+# x2;;
+- : int = 2
+# let x = (1,2,3);;
+val x : int * int * int = (1, 2, 3)
+# let (x1,x2,x3) = x;;
+val x1 : int = 1
+val x2 : int = 2
+val x3 : int = 3
+# let (a,b,c) = x;;
+val a : int = 1
+val b : int = 2
+val c : int = 3
+# fst x;;
+Characters 4-5:
+  fst x;;
+      ^
+Error: This expression has type int * int * int
+       but an expression was expected of type 'a * 'b
+# fst;;
+- : 'a * 'b -> 'a = <fun>
+# let y = (1,(2,3));;
+val y : int * (int * int) = (1, (2, 3))
+# 
+  
+  ;;
+Characters 2-4:
+  ;;
+  ^^
+Error: Syntax error
+# #use "expr.ml";;
+type expr =
+    Plus of expr * expr
+  | Times of expr * expr
+  | Num of string
+  | Parens of expr
+val eval : expr -> int = <fun>
+val print_expr : expr -> unit = <fun>
+# #help
+  
+  ;;
+Unknown directive `help'.
+# #use "expr.ml";;
+type expr =
+    Plus of expr * expr
+  | Times of expr * expr
+  | Num of string
+  | Parens of expr
+val eval : expr -> int = <fun>
+val print_expr : expr -> unit = <fun>
+# eval (Plus(Num("2"),Plus(Num("3"),Num("4"))));;
+- : int = 9
+# eval (Plus(Num("2"),Plus(Num("3"),Num("40"))));;
+- : int = 45
+# 

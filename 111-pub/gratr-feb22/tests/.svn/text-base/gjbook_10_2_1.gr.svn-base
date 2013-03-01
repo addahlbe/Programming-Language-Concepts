@@ -1,0 +1,15 @@
+# This grammar is not LR(1), according to Grune and Jacobs (page 358).
+
+gj10_21_1
+
+Start
+
+S
+
+Syntactic
+
+R1 : S -> a .
+R2 : S -> a S B .
+R3 : S -> b S B .
+R4 : B -> b.
+

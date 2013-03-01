@@ -1,0 +1,21 @@
+expr
+
+Start
+expr
+
+Whitespace
+ws
+
+Syntactic
+Id : expr -> ws id .
+Plus : expr -> expr '+' expr .
+
+Lexical 
+id -> 'x' | 'xx' .
+ws => space .
+
+Vars
+x y z
+
+Rules
+Plus(x,Plus(y,z)) -> Plus(Plus(x,y),z)

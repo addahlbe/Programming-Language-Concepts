@@ -1,0 +1,14 @@
+test
+
+Start 
+
+test
+
+Syntactic
+
+test -> test2 .
+
+test2 -> test 'a'.
+test2 -> test3.
+
+test3 -> test.

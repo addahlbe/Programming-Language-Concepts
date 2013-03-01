@@ -1,0 +1,23 @@
+(VAR x7 x6 x5 x4 x3 x2 x1 x0)
+
+(RULES
+
+B(x1) -> C(x1)
+B2() -> C2()
+B1(x1) -> C1(x1)
+dot(C(x1), dot(C(x2), x3)) -> dot(C(unC(x1, x2)), x3)
+unC(C2(), x1) -> C1(x1)
+unC(C1(x1), x2) -> C1(unC(x1, x2))
+unC(x1, C1(x2)) -> C1(unC(x1, x2))
+unC(x1, C2()) -> C1(x1)
+unC(unC(x1, x2), x3) -> unC(x1, unC(x2, x3))
+dot(C(x0), dot(c(), x1)) -> dot(S(Sc(x0)), x1)
+dot(B(x0), dot(b(), x1)) -> dot(S(Sb(x0)), x1)
+dot(C(x0), dot(a(), x1)) -> dot(C(C1(x0)), x1)
+dot(a(), x0) -> dot(C(C2()), x0)
+dot(B(x0), dot(a(), x1)) -> dot(B(B1(x0)), x1)
+dot(a(), x0) -> dot(B(B2()), x0)
+dot(C(x1), dot(b(), x3)) -> dot(S(Sb(x1)), x3)
+dot(C(x3), dot(S(Sc(x0)), x1)) -> dot(S(Sc(unC(x3, x0))), x1)
+dot(C(x5), dot(S(Sb(x1)), x3)) -> dot(S(Sb(unC(x5, x1))), x3)
+)

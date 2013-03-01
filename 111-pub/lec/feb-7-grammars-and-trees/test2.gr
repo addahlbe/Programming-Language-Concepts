@@ -1,0 +1,9 @@
+test
+
+Start
+
+s
+
+Syntactic
+
+s -> ( ( ( ( 'abc' )* 'd' ) * )* ) * .

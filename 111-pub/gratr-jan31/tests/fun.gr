@@ -1,0 +1,43 @@
+lam
+
+Start
+
+term
+
+Whitespace
+
+ws
+
+Syntactic
+
+Lam : term -> 'fun' ( '(' id ':' tp ')' )+ '->' term .
+App : term -> term term .
+Paren : term -> '(' term ')' . 
+Var : term -> id .
+Base : tp -> id .
+Arrow : tp -> tp '->' tp .
+TParen : tp -> '(' tp ')' .
+
+Lexical
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+id -> ( 'a' - 'b' ) + .
+
+Vars
+
+w x y z zz
+
+Rules
+
+App(x,App(y,z)) -> App(App(x,y),z)
+
+App(Lam(x,y), z) -> Lam(x,App(y,z))
+
+App(App(zz, Lam(x,y)), z) -> App(zz, Lam(x,App(y, z)))
+
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+

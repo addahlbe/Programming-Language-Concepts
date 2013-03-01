@@ -1,0 +1,22 @@
+chars
+
+Start
+
+ids
+
+Whitespace
+
+ws
+
+Syntactic
+
+ids -> ( id ) + .
+
+Lexical 
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+id -> [ 'a' - 'c' ] + .

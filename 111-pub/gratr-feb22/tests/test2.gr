@@ -1,0 +1,16 @@
+test2
+
+Start 
+
+s
+
+Syntactic
+
+s -> expr1 'b'+ 'c'.
+s -> expr2 'b'+ 'd'.
+
+expr1 -> 'a'.
+expr2 -> 'a'.
+
+%expr1e -> '\n'?.
+%expr2e -> '\n'?.

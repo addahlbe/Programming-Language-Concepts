@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/clc/!svn/ver/11840/class/2013/111-pub/gratr-jan31
+END
+completion.ml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/completion.ml
+END
+rewriting.ml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/rewriting.ml
+END
+render.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/render.sh
+END
+gra2srs_pp.ml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_pp.ml
+END
+compile.bat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/compile.bat
+END
+aut.ml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/aut.ml
+END
+gra2srs_ppast.ml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_ppast.ml
+END
+descendants.ml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/descendants.ml
+END
+localconf.ml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/localconf.ml
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/Makefile
+END
+gra2srs_parse.mly
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_parse.mly
+END
+term.ml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/term.ml
+END
+gra2srs_lex.mll
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_lex.mll
+END
+trs.ml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/trs.ml
+END
+gra2srs_eq.ml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_eq.ml
+END
+util.ml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/util.ml
+END
+gra2srs_util.ml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_util.ml
+END
+gra2srs_gviz.ml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_gviz.ml
+END
+main.ml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/main.ml
+END
+gra2srs.gra
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs.gra
+END
+grammar.ml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/grammar.ml
+END
+gra2srs_main.ml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_main.ml
+END
+termination.ml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/termination.ml
+END
+gra2srs_syntax.ml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gra2srs_syntax.ml
+END
+parsing_trs.ml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/parsing_trs.ml
+END
+run_rewriting.ml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11840/class/2013/111-pub/gratr-jan31/run_rewriting.ml
+END
+termination.mli
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/termination.mli
+END
+gratr.vim
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gratr.vim
+END
+trie.ml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/trie.ml
+END
+run_gratr.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/run_gratr.sh
+END
+gratr.el
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/gratr.el
+END

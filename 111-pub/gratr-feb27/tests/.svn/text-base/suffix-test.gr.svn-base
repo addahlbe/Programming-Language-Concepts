@@ -1,0 +1,15 @@
+suffix
+
+Start
+
+s
+
+Productions
+
+0 : s -> a s b .
+1 : s -> c s b .
+2 : s -> d .
+
+Vars
+
+Rules

@@ -1,0 +1,11 @@
+% L(a+)
+aplus
+
+Start
+
+t
+
+Syntactic
+
+A: t -> 'a' t .
+B: t -> 'a' .

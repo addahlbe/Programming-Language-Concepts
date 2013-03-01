@@ -1,0 +1,26 @@
+id
+
+Whitespace
+
+ws
+
+Syntactic
+
+Start : start -> sos ids eos .
+
+Ids : ids -> ( id ) + .
+
+Aaid : id -> aaid.
+Bbid : id -> bbid.
+
+Lexical 
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+aaid -> 'a' 'a' ('b' | 'a') + .
+bbid -> 'b' 'b' ('c' | 'a') + .
+
+

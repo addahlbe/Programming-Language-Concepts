@@ -1,0 +1,11 @@
+(VAR x0 x1 x2 x y z)
+(RULES
+dot(term(Lam(x0)), x1) -> dot(lam, dot(id, dot(dt, dot(term(x0), x1)))) 
+dot(term(App(x0, x1)), x2) -> dot(term(x0), dot(term(x1), x2)) 
+dot(term(Paren(x0)), x1) -> dot(lp, dot(term(x0), dot(rp, x1))) 
+dot(term(Var), x0) -> dot(id, x0) 
+
+App(App(x,y),z) -> App(x,App(y,z)) 
+Lam(App(x,y)) -> App(Lam(x), y) 
+App(x, Lam(App(y, z))) -> App(App(x, Lam(y)), z)
+)

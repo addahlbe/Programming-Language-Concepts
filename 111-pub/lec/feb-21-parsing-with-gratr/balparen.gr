@@ -1,0 +1,30 @@
+balparen
+
+Start
+
+s
+
+Whitespace
+
+ws
+
+Syntactic
+
+Paren : s -> '(' s ')' .
+Base : s -> '(' ')' .
+Seq : s -> s s .
+
+Lexical 
+
+ws -> '\n'.
+ws -> '\t'. 
+ws -> space. 
+ws -> ws ws. 
+
+Vars
+
+x y z
+
+Rules
+
+Seq(x,Seq(y,z)) -> Seq(Seq(x,y),z) 

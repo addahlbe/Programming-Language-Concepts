@@ -1,0 +1,57 @@
+tlam2
+
+Start
+
+term
+
+Whitespace
+
+ws
+
+Syntactic
+
+Id: pid -> id .
+Paren: pid -> 'lp' pid 'rp' .
+
+Var:  term -> pid . 
+Lam:  term -> '\\' id ':' tp '.' term .
+App:  term -> term term .
+PLam: term -> 'lp' '\\' id ':' tp '.' term 'rp' . 
+PApp: term -> 'lp' term term 'rp' . 
+
+Base:   tp -> pid .
+Arrow:  tp -> tp '->' tp .
+PArrow: tp -> 'lp' tp '->' tp 'rp' .
+
+Lexical
+
+id -> 'x' .
+id -> 'y' .
+id -> 'z' .
+
+id -> id '1' .
+id -> id '2' .
+id -> id '3' .
+
+ws -> '\t' .
+ws -> '\n' .
+ws -> space .
+ws -> ws ws .
+
+Vars
+
+w x y z x0 x1 x2 x3 x4 x5 x6 x7 x8 x9
+
+Rules
+
+dot(tp(Base(x0)), y) -> dot(term(Var(x0)), y)
+
+App(x3, App(x0, x1)) -> App(App(x3, x0), x1)
+App(Lam(w,x3, x0), x1) -> Lam(w,x3, App(x0, x1))
+App(App(x5, Lam(w,x1, x2)), x3) -> App(x5, Lam(w,x1, App(x2, x3)))
+PApp(x1, App(x2, x3)) -> PApp(App(x1, x2), x3)
+PApp(App(x5, Lam(w,x1, x2)), x3) -> PApp(x5, Lam(w,x1, App(x2, x3)))
+PApp(Lam(w,x1, x2), x3) -> PLam(w,x1, App(x2, x3))
+
+Arrow(Arrow(x3, x0), x1) -> Arrow(x3, Arrow(x0, x1))
+PArrow(Arrow(x1, x2), x3) -> PArrow(x1, Arrow(x2, x3))

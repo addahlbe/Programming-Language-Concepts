@@ -1,0 +1,13 @@
+# This is LL(2) but not LL(1), according to Grune and Jacobs (page 255).
+
+gj811 
+
+Start
+
+S
+
+Syntactic
+
+S1 : S -> a a b .
+S2 : S -> a a a.
+

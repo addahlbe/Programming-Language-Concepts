@@ -1,0 +1,68 @@
+frag
+
+Start Already
+
+start_
+
+Whitespace Already
+
+ws
+
+Syntactic
+
+Start__1 : start_ -> sos ws 'class' Identifier classBody ws eos.
+Start__2 : start_ -> sos ws 'class' Identifier ws 'implements' typeList classBody ws eos.
+Start__3 : start_ -> sos ws 'class' Identifier ws 'extends' type classBody ws eos.
+Start__4 : start_ -> sos ws 'class' Identifier ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__5 : start_ -> sos ws 'class' Identifier ws '<' Identifier typeParameters_plus_11 ws '>' classBody ws eos.
+Start__6 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeParameters_plus_11 ws '>' classBody ws eos.
+Start__7 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 typeParameters_plus_11 ws '>' classBody ws eos.
+Start__8 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws '>' classBody ws eos.
+Start__9 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type ws '>' classBody ws eos.
+Start__10 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 ws '>' classBody ws eos.
+Start__11 : start_ -> sos ws 'class' Identifier ws '<' Identifier typeParameters_plus_11 ws '>' ws 'implements' typeList classBody ws eos.
+Start__12 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeParameters_plus_11 ws '>' ws 'implements' typeList classBody ws eos.
+Start__13 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 typeParameters_plus_11 ws '>' ws 'implements' typeList classBody ws eos.
+Start__14 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws '>' ws 'implements' typeList classBody ws eos.
+Start__15 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type ws '>' ws 'implements' typeList classBody ws eos.
+Start__16 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 ws '>' ws 'implements' typeList classBody ws eos.
+Start__17 : start_ -> sos ws 'class' Identifier ws '<' Identifier typeParameters_plus_11 ws '>' ws 'extends' type classBody ws eos.
+Start__18 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeParameters_plus_11 ws '>' ws 'extends' type classBody ws eos.
+Start__19 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 typeParameters_plus_11 ws '>' ws 'extends' type classBody ws eos.
+Start__20 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws '>' ws 'extends' type classBody ws eos.
+Start__21 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type ws '>' ws 'extends' type classBody ws eos.
+Start__22 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 ws '>' ws 'extends' type classBody ws eos.
+Start__23 : start_ -> sos ws 'class' Identifier ws '<' Identifier typeParameters_plus_11 ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__24 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeParameters_plus_11 ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__25 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 typeParameters_plus_11 ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__26 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__27 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+Start__28 : start_ -> sos ws 'class' Identifier ws '<' Identifier ws 'extends' type typeBound_plus_14 ws '>' ws 'extends' type ws 'implements' typeList classBody ws eos.
+R66 : typeBound_plus_14 -> typeBound_plus_14 typeBound_plus_14.
+R67_1 : typeBound_plus_14 -> ws '&' type.
+R58 : typeParameters_plus_11 -> typeParameters_plus_11 typeParameters_plus_11.
+R59_1 : typeParameters_plus_11 -> ws ',' Identifier ws 'extends' type typeBound_plus_14.
+R59_2 : typeParameters_plus_11 -> ws ',' Identifier ws 'extends' type.
+R59_3 : typeParameters_plus_11 -> ws ',' Identifier.
+
+
+Lexical
+
+ws -> '\t'.
+ws -> '\n'.
+ws -> space.
+ws -> ws ws.
+
+
+Vars
+
+ x3 x2 x1 x0
+
+Rules
+
+R58(R58(x1, x2), x3) -> R58(x1, R58(x2, x3))
+R66(R66(x1, x2), x3) -> R66(x1, R66(x2, x3))
+normalClassDeclaration_8(R47) -> typeParameter_12(R62(R69))
+
+
+ 

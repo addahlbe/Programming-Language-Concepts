@@ -1,0 +1,24 @@
+streq
+
+Start
+
+eqs
+
+Whitespace
+
+ws
+
+Syntactic
+
+eqs -> eq +.
+
+eq -> lhs '=' rhs '\n' .
+
+Lexical
+
+lhs -> ['a'-'b']+.
+rhs -> ['a'-'b']+.
+
+ws => space.
+ws => '\t'.
+ws => ws ws.

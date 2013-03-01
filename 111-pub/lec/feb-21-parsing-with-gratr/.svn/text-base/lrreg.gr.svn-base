@@ -1,0 +1,15 @@
+lrreg
+
+Start 
+
+s
+
+Syntactic
+
+First : s -> expr1 'a'+ 'c'.
+Second : s -> expr2 'a'+ 'd'.
+
+Expr1 : expr1 -> 'z'.
+Expr2 : expr2 -> 'z'.
+
+

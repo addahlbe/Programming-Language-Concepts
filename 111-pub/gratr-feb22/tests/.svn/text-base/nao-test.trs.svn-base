@@ -1,0 +1,8 @@
+(VAR x2 x1 x0)
+
+(RULES
+
+dot(id(), x0) -> dot(term(Id()), x0)
+dot(term(x0), dot(plus(), dot(expr(x1), x2))) -> dot(expr(Plus(x0, x1)), x2)
+dot(term(x0), x1) -> dot(expr(Term(x0)), x1)
+)

@@ -1,0 +1,12 @@
+threedigs
+
+Start
+
+num
+
+Lexical 
+
+nonzero -> ['1' - '9'] .
+digit -> '0' | nonzero .
+
+num -> digit | nonzero digit | nonzero digit digit .

@@ -1,0 +1,31 @@
+lam
+
+Start
+
+term
+
+Productions
+
+Lam : term -> '\\' id ':' tp '.' term .
+App : term -> term term .
+Var : term -> id .
+Base : tp -> id .
+Arrow : tp -> tp '->' tp .
+TParen : tp -> lp tp rp .
+
+Vars
+
+w x y z 
+
+Rules
+
+App(x,App(y,z)) -> App(App(x,y),z)
+
+App(Lam(w,x), y) -> Lam(w,App(x,y))
+
+App(App(x, Lam(w,y)), z) -> App(x, Lam(w,App(y, z)))
+
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+
+term(Var) -> tp(Base)
+

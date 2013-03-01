@@ -1,0 +1,14 @@
+nfa1
+
+Start
+
+s0
+
+Lexical 
+
+s0 -> 'a' s0 .
+s0 -> 'b' s0 .
+s0 -> 'a' s1 .
+s1 -> 'a' s2 .
+s1 -> 'b' s2 .
+s2 -> .

@@ -1,0 +1,16 @@
+lrreg
+
+Start 
+
+s
+
+Syntactic
+
+s -> expr1 'a'+ 'c' 'b'+ expr1.
+s -> expr2 'a'+ 'd' 'b'+ expr2.
+
+expr1 -> 'z'.
+expr2 -> 'z'.
+
+%expr1e -> '\n'?.
+%expr2e -> '\n'?.

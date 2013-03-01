@@ -1,0 +1,17 @@
+eg1
+
+Start 
+
+s
+
+Syntactic
+
+First : s -> expr1 as 'c'.
+Second : s -> expr2 as 'd'.
+
+Expr1 : expr1 -> 'z'.
+Expr2 : expr2 -> 'z'.
+
+Lexical
+
+as -> 'a'+.

@@ -1,0 +1,23 @@
+expr
+
+Start
+
+stmt
+
+Syntactic
+
+Expr:   stmt -> expr ';' .
+Block:  stmt -> '{' stmt+ '}' .
+IfElse: stmt -> IF '(' expr ')' stmt ELSE stmt .
+If:     stmt -> IF '(' expr ')' stmt eos .
+IfStmt: stmt -> IF '(' expr ')' stmt stmt .
+
+Id:   expr -> ID .
+Plus: expr -> expr '+' expr .
+ 
+Vars
+
+x y z w u v
+
+Rules
+Plus(x,Plus(y,z)) -> Plus(Plus(x,y),z)

@@ -1,0 +1,500 @@
+java
+
+Start
+
+compilationUnit
+
+Syntactic
+
+compilationUnit ->
+   annotations
+        (   packageDeclaration importDeclaration* typeDeclarations?
+        |   classOrInterfaceDeclaration typeDeclarations?
+        )
+    |   packageDeclaration importDeclaration* typeDeclarations?
+    |   packageDeclaration? importDeclaration+ typeDeclarations?
+    |   packageDeclaration? importDeclaration* typeDeclarations
+    .
+
+qualifiedName =
+   Identifier qualifiedNameRest?
+    .
+
+qualifiedNameList =
+    qualifiedName (',' Identifier qualifiedNameRest # commaId -> ',' Identifier)*
+    .
+
+packageDeclaration ->
+   'package' qualifiedName ';'
+    .
+    
+importDeclaration ->
+   'import' 'static'? qualifiedName ('.' '*')? ';'
+    .
+    
+blockStatementAlt
+    ->   localVariableDeclarationStatement
+    |   statementAlt
+    .
+
+blockStatements ->
+   ( blockStatementAlt # typeDeclarations -> classOrInterfaceDeclaration # semis -> ';' )*
+    .
+
+classOrInterfaceDeclaration ->
+   classOrInterfaceModifiers? (classDeclaration | interfaceDeclaration)
+    .
+    
+classDeclaration ->
+   normalClassDeclaration
+    |   enumDeclaration
+    .
+    
+classOrInterfaceTypeAltRest ->
+   ('.' Identifier typeArguments # qualifiedNameRest -> '.' Identifier )+
+    .
+
+classOrInterfaceTypeAlt -> 
+        Identifier ( typeArguments classOrInterfaceTypeAltRest? | classOrInterfaceTypeAltRest )
+        .
+        
+variableDeclaratorId ->
+   Identifier ('[' ']')*
+    .
+
+type =	
+     variableDeclaratorId
+   | typeAlt
+   .
+
+variableDeclarator = 
+  variableDeclaratorId 
+    |   variableDeclaratorAlt
+    .
+
+typeAlt ->
+    classOrInterfaceTypeAlt ('[' ']')*
+  | primitiveType ('[' ']')*
+  .
+
+variableInitializer = 
+    arrayInitializer
+ |  expression
+ .
+        
+variableDeclaratorAlt -> 
+    variableDeclaratorId '=' variableInitializer  .
+
+
+variableDeclarators ->
+     variableDeclaratorAlt (',' variableDeclaratorAlt # ',' variableDeclaratorId)*
+ |  variableDeclaratorIds
+ .
+
+variableDeclaratorIds ->  
+  variableDeclaratorId ( ',' variableDeclaratorId )*
+  .
+
+typeList ->   
+     typeAlt (',' typeAlt # ',' variableDeclaratorId)*
+  |  variableDeclaratorIds
+  .
+
+classBody
+    =   '{' ( modifiers? memberDecl | 'static'? block ## semis -> ';')+ '}' | '{' semis? '}'
+    .
+    
+interfaceBody
+    =   '{' ( modifiers? interfaceMemberDecl ##  ';' )+ '}' | '{' semis? '}'
+    .
+
+normalClassDeclaration
+    ->   'class' Identifier typeParameters?
+        ('extends' type)?
+        ('implements' typeList)?
+        classBody
+    .
+    
+typeBound
+    =   type ('&' type)*
+    .
+
+typeParameters
+    ->   '<' Identifier ('extends' typeBound)? (',' Identifier 'extends' typeBound # commaIds -> ',' Identifier )* '>'
+    .
+
+        
+enumDeclaration
+    ->   ENUM Identifier ('implements' typeList)? enumBody
+    .
+
+enumBodyDeclarations
+    =   ';' (classBodyDeclaration)*
+    .
+    
+enumBody
+    ->   '{' enumConstants? ','? enumBodyDeclarations? '}'
+    .
+
+enumConstants
+    ->   enumConstant (',' enumConstant)*
+    .
+    
+enumConstant
+    ->   annotations? Identifier arguments? classBody?
+    .
+    
+interfaceDeclaration
+    ->   normalInterfaceDeclaration
+    |   annotationTypeDeclaration
+    .
+    
+normalInterfaceDeclaration
+    ->   'interface' Identifier typeParameters? ('extends' typeList)? interfaceBody
+    .
+    
+memberDecl
+    ->   genericMethodOrConstructorDecl
+    |   methodDeclaration
+    |   fieldDeclaration
+    |   'void' Identifier voidMethodDeclaratorRest
+    |   Identifier constructorDeclaratorRest
+    |   interfaceDeclaration
+    |   classDeclaration
+    .
+    
+genericMethodOrConstructorDecl
+    ->   typeParameters (type | 'void') Identifier methodDeclaratorRest
+    |   typeParameters Identifier constructorDeclaratorRest
+    .
+
+methodDeclaration
+    ->   type Identifier methodDeclaratorRest
+    .
+
+fieldDeclaration
+    ->   type variableDeclarators ';'
+    .
+        
+interfaceMemberDecl
+    ->   interfaceMethodOrFieldDecl
+    |   interfaceGenericMethodDecl
+    |   'void' Identifier voidInterfaceMethodDeclaratorRest
+    |   interfaceDeclaration
+    |   classDeclaration
+    .
+    
+interfaceMethodOrFieldDecl
+    ->   type Identifier constantDeclaratorsRest ';'
+    |   type Identifier interfaceMethodDeclaratorRest
+    .
+    
+methodDeclaratorRest
+    ->   formalParameters ('[' ']')+
+        methodDeclaratorFinish
+    | voidMethodDeclaratorRest
+    .
+    
+voidMethodDeclaratorRest
+    ->   formalParameters methodDeclaratorFinish
+    .
+    
+methodBody
+    =   block
+    .
+
+methodDeclaratorFinish
+    ->  ('throws' qualifiedNameList)?
+        (   methodBody
+        |   ';'
+        )
+    .
+
+interfaceMethodDeclaratorFinish
+    -> ('throws' qualifiedNameList)? ';'
+    .
+
+interfaceMethodDeclaratorRest
+    ->   formalParameters ('[' ']')+ interfaceMethodDeclaratorFinish
+    |   voidInterfaceMethodDeclaratorRest
+    .
+    
+interfaceGenericMethodDecl
+    ->   typeParameters (type | 'void') Identifier
+        interfaceMethodDeclaratorRest
+    .
+    
+voidInterfaceMethodDeclaratorRest
+    ->   formalParameters interfaceMethodDeclaratorFinish
+    .
+    
+constructorDeclaratorRest
+    ->   formalParameters ('throws' qualifiedNameList)? constructorBody
+    .
+
+constantDeclarator
+    ->   Identifier constantDeclaratorRest
+    .
+    
+constantDeclaratorsRest
+    ->   constantDeclaratorRest (',' constantDeclarator)*
+    .
+
+constantDeclaratorRest
+    ->   ('[' ']')* '=' variableInitializer
+    .
+    
+arrayInitializer
+    ->   '{' (variableInitializer (',' variableInitializer)* (',')? )? '}'
+    .
+
+% note that this also defines classOrInterfaceModifiers, variableModifiers, and annotations
+modifiers
+    -> ( modifier # classOrInterfaceModifiers -> classOrInterfaceModifier # variableModifiers -> 'final' # annotations -> annotation)+
+    .
+
+modifier
+    ->   'native'
+    |   'synchronized'
+    |   'transient'
+    |   'volatile'
+    .
+
+classOrInterfaceModifier
+    ->   'public'     
+    |   'protected'  
+    |   'private'    
+    |   'abstract'   
+    |   'static'     
+    |   'strictfp'   
+    .
+
+packageOrTypeName
+    ->   qualifiedName
+    .
+
+enumConstantName
+    ->   Identifier
+    .
+
+typeName
+    ->   qualifiedName
+    .
+
+
+primitiveType
+    ->   'boolean'
+    |   'char'
+    |   'byte'
+    |   'short'
+    |   'int'
+    |   'long'
+    |   'float'
+    |   'double'
+    .
+
+typeArgumentAlt
+    =   '?' (('extends' | 'super') type)?
+    .
+    
+typeArguments
+    ->   '<' typeArgument (',' type # ',' typeArgumentAlt)* '>'
+    .
+    
+formalParameters
+    ->   '(' formalParameterDecls? ')'
+    .
+    
+formalParameterDecls
+    ->   variableModifiers? type formalParameterDeclsRest
+    .
+    
+formalParameterDeclsRest
+    ->   variableDeclaratorId (',' formalParameterDecls)?
+    |   '...' variableDeclaratorId
+    .
+    
+constructorBody
+    ->   '{' explicitConstructorInvocation? blockStatements '}'
+    .
+
+explicitConstructorInvocation
+    ->   nonWildcardTypeArguments? ('this' | 'super') arguments ';'
+    |   primary '.' nonWildcardTypeArguments? 'super' arguments ';'
+    .
+
+
+literal 
+    ->   integerLiteral
+    |   FloatingPointLiteral
+    |   CharacterLiteral
+    |   StringLiteral
+    |   booleanLiteral
+    |   'null'
+    .
+
+integerLiteral
+    ->   HexLiteral
+    |   OctalLiteral
+    |   DecimalLiteral
+    .
+
+booleanLiteral
+    ->   'true'
+    |   'false'
+    .
+
+annotation
+    ->   '@' Identifier ('.' Identifier)* ( '(' ( elementValuePairs | elementValue )? ')' )?
+    .
+    
+elementValuePairs
+    ->   elementValuePair (',' elementValuePair)*
+    .
+
+elementValuePair
+    ->   Identifier '=' elementValue
+    .
+    
+elementValue
+    ->   conditionalExpression
+    |   annotation
+    |   elementValueArrayInitializer
+    .
+    
+elementValueArrayInitializer
+    ->   '{' (elementValue (',' elementValue)*)? (',')? '}'
+    .
+    
+annotationTypeDeclaration
+    ->   '@' 'interface' Identifier annotationTypeBody
+    .
+    
+annotationTypeBody
+    ->   '{' (annotationTypeElementDeclaration)* '}'
+    .
+    
+annotationTypeElementDeclaration
+    ->   modifiers? annotationTypeElementRest
+    .
+    
+annotationTypeElementRest
+    ->   type annotationMethodOrConstantRest ';'
+    |   normalClassDeclaration ';'?
+    |   normalInterfaceDeclaration ';'?
+    |   enumDeclaration ';'?
+    |   annotationTypeDeclaration ';'?
+    .
+    
+annotationMethodOrConstantRest
+    ->   annotationMethodRest
+    |   annotationConstantRest
+    .
+    
+annotationMethodRest
+    ->   Identifier '(' ')' defaultValue?
+    .
+    
+annotationConstantRest
+    ->   variableDeclarators
+    .
+    
+defaultValue
+    ->   'default' elementValue
+    .
+
+block
+    ->   '{' blockStatements '}'
+    .
+    
+localVariableDeclarationStatement
+    ->    localVariableDeclaration ';'
+    .
+
+localVariableDeclaration
+    ->   variableModifiers? type variableDeclarators
+    .
+    
+statement
+    = statementAlt | ';'
+    .
+
+statementAlt
+    -> block
+    |   ASSERT expression (':' expression)? ';'
+    |   'if' parExpression statement ('else' statement)?
+    |   'for' '(' forControl ')' statement
+    |   'while' parExpression statement
+    |   'do' statement 'while' parExpression ';'
+    |   'try' block
+        ( catches 'finally' block
+        | catches
+        |   'finally' block
+        )
+    |   'switch' parExpression '{' switchBlockStatementGroups? '}'
+    |   'synchronized' parExpression block
+    |   'return' expression? ';'
+    |   'throw' expression ';'
+    |   'break' Identifier? ';'
+    |   'continue' Identifier? ';'
+    |   expression ';'
+    |   Identifier ':' statement
+    .
+    
+catches
+    ->   catchClause (catchClause)*
+    .
+    
+catchClause
+    ->   'catch' '(' formalParameter ')' block
+    .
+
+formalParameter
+    ->   variableModifiers? type variableDeclaratorId
+    .
+        
+switchBlockStatementGroups
+    ->   (switchBlockStatementGroup)+
+    .
+    
+
+switchBlockStatementGroup
+    ->   switchLabel+ blockStatements
+    .
+    
+switchLabel
+    ->   'case' constantExpression ':'
+    |   'case' enumConstantName ':'
+    |   'default' ':'
+    .
+    
+forControl
+    ->   enhancedForControl
+    |   forInit? ';' expression? ';' forUpdate?
+    .
+
+forInit
+    ->   localVariableDeclaration
+    |   expressionList
+    .
+    
+enhancedForControl
+    ->   variableModifiers type Identifier ':' expression
+    .
+
+forUpdate
+    ->   expressionList
+    .
+
+parExpression
+    ->   '(' expression ')'
+    .
+    
+expressionList
+    ->   expression (',' expression)*
+    .
+
+constantExpression
+    ->   expression
+    .
+    

@@ -1,0 +1,18 @@
+q6
+
+Start
+
+s
+
+Whitespace 
+
+ws
+
+Syntactic
+
+s -> ((id) '(' ((id)* (',' (id))*) ')' '=' (id)* ('+' (id))* ';;' ('\n')*)*.
+
+Lexical
+
+ws -> '\t' | '\n' | space | ws ws.
+id -> ['a'-'z']+ .

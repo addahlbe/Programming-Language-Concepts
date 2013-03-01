@@ -1,0 +1,43 @@
+lam
+
+Start
+
+term
+
+Whitespace
+
+ws
+
+Syntactic
+
+Lam : term -> '\\' id ':' tp '.' term .
+App : term -> term term .
+Paren : term -> '(' term ')' . 
+Var : term -> ws id .
+Base : tp -> ws id .
+Arrow : tp -> tp '->' tp .
+TParen : tp -> '(' tp ')' .
+
+Lexical
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+id -> [ 'a' - 'z' ] + .
+
+Vars
+
+w x y z zz
+
+Rules
+
+App(x,App(y,z)) -> App(App(x,y),z)
+
+App(Lam(w,x,y), z) -> Lam(w,x,App(y,z))
+
+App(App(zz, Lam(w,x,y)), z) -> App(zz, Lam(w,x,App(y, z)))
+
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+

@@ -1,0 +1,46 @@
+lam
+
+Start
+
+term
+
+Productions
+
+Lam : term -> '\\' id ':' tp '.' term .
+App : term -> term term .
+Paren : term -> '(' term ')' . 
+Var : term -> id .
+Base : tp -> id .
+Arrow : tp -> tp '->' tp .
+TParen : tp -> '(' tp ')' .
+
+Vars
+
+w x y z 
+
+Rules
+
+App(x,App(y,z)) -> App(App(x,y),z)
+
+App(Lam(w,x), y) -> Lam(w,App(x,y))
+
+App(App(x, Lam(w,y)), z) -> App(x, Lam(w,App(y, z)))
+
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+
+dot(tp(Base), x) -> dot(term(Var), x)
+
+Paren(x) -> nParen(S(Z),x)
+TParen(x) -> nParen(S(Z),x)
+
+tp(nParen(x,Base)) -> term(nParen(x,Var))
+
+nParen(x,TParen(y)) -> nParen(S(x),y)
+nParen(x,nParen(y,z)) -> nParen(add(x,y),z)
+TParen(nParen(x,y)) -> nParen(S(x),y)
+add(add(x,y),z) -> add(x,add(y,z))
+add(x,S(y)) -> S(add(x,y))
+add(S(x),y) -> S(add(x,y))
+add(x,Z) -> x
+add(Z,x) -> x
+

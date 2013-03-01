@@ -1,0 +1,20 @@
+et
+
+Start
+
+A
+
+Syntactic
+
+R1 : A -> A A .
+R2 : A -> B .
+R3 : B -> good .
+R4 : B -> good bye .
+
+Vars
+
+x y z
+
+Rules
+
+R1(R1(x,y),z) -> R1(x,R1(y,z))

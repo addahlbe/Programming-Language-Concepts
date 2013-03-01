@@ -1,0 +1,14 @@
+# this example is LALR(1) but cannot be handled by our method
+
+lr_counter
+
+Start
+
+start
+
+Syntactic
+
+R1 : S -> a b A c d .
+R2 : S -> z b B c e .
+R3 : A -> a .
+R4 : B -> a .

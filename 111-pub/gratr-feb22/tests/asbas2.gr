@@ -1,0 +1,13 @@
+asbas2
+
+Start
+
+a
+
+Lexical 
+
+a => 'a' a .
+a => 'a' b.
+b => 'b' b.
+b => 'b' a.
+b => 'b' .

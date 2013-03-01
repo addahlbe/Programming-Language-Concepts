@@ -1,0 +1,12 @@
+kr
+
+Productions
+
+0 : s -> a b s d .
+1 : q -> a b .
+2 : s -> e d .
+
+
+Vars
+
+Rules

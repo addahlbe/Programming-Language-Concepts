@@ -1,0 +1,18 @@
+list
+
+Productions
+
+0 : l -> a .
+1 : l -> a b .
+S : l -> l l .
+
+Vars
+
+x y z
+
+Rules
+
+S(S(x,y),z) -> S(x,S(y,z))
+dot(l(x),dot(b,y)) -> dot(l(unlb(x)),y)
+unlb(0) -> 1
+unlb(S(x,y)) -> S(x,unlb(y))

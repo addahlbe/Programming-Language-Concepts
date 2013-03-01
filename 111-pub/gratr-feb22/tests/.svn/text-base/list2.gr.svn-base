@@ -1,0 +1,14 @@
+list
+
+Productions
+
+A : l -> a .
+B : l -> l l .
+
+Vars
+
+x y z
+
+Rules
+
+B(B(x,y),z) -> B(x,B(y,z))

@@ -1,0 +1,19 @@
+list
+
+Productions
+
+A : S -> a .
+B : S -> S a .
+
+Vars
+
+x y z
+
+Rules
+
+dot(S(x),dot(S(y),z)) -> dot(S(combine(x,y)),z)
+combine(combine(x,y),z) -> combine(x,combine(y,z))
+combine(A,y) -> B(y)
+combine(y,A) -> B(y)
+combine(B(x),y) -> B(combine(x,y))
+combine(x,B(y)) -> B(combine(x,y))

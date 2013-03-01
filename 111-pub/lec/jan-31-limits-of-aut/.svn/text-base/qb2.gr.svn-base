@@ -1,0 +1,9 @@
+qb
+
+Start
+
+s
+
+Lexical
+
+s -> ('ab'+ 'c'+)* . %'\n'?.

@@ -1,0 +1,23 @@
+id
+
+Whitespace
+
+ws
+
+Syntactic
+
+Start : start -> sos ids eos .
+
+Ids : ids -> ( id ) + .
+
+Lexical 
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+letter -> 'a' .
+number -> '1' .
+id ->  letter letter  (letter | number ) * .
+

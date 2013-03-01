@@ -1,0 +1,14 @@
+q3
+
+Start 
+
+com
+
+Lexical
+
+com -> '/*' body '*/'.
+
+safe -> ['a' - 'b' '\n'] | space .
+
+body -> safe body .
+body -> '*' safe body .

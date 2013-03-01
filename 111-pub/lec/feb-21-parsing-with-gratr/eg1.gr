@@ -1,0 +1,17 @@
+eg1
+
+Start
+
+s
+
+Syntactic
+
+S1 : s -> 'a' c1.
+S2 : s -> 'b' c2.
+
+Bye : c1 -> cs.
+Hello : c2 -> cs.
+
+Lexical
+
+cs -> 'c'+.

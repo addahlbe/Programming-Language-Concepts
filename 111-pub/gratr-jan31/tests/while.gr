@@ -1,0 +1,23 @@
+while
+
+Start
+
+stmt
+
+Productions
+
+Assign : stmt -> var ':=' expr .
+Seq : stmt -> stmt ';' stmt .
+Plus : expr -> expr '+' expr .
+Id : expr -> id .
+
+
+Vars
+
+x y z
+
+Rules
+Plus(Plus(x, y), z) -> Plus(x, Plus(y, z))
+Seq(x, Seq(y, z)) -> Seq(Seq(x, y), z)
+# The reverse direction diverge:
+#Seq(Seq(x, y), z) -> Seq(x, Seq(y, z))

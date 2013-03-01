@@ -1,0 +1,17 @@
+q7
+
+Start 
+
+s
+
+Lexical
+
+s -> 'a' s 'b' . 
+
+s -> '0' s '1'.
+
+s -> s s '\n'?.
+
+s ->.
+
+

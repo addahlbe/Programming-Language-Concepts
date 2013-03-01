@@ -1,0 +1,17 @@
+expr
+
+Start
+
+s
+
+Syntactic
+
+s -> a 'b' 'd'.
+s -> 'a' b 'e'.
+
+a -> 'a' .
+b -> 'b' .
+
+
+
+

@@ -1,0 +1,21 @@
+kw
+
+Start
+
+str
+
+Whitespace
+
+ws
+
+Syntactic
+
+str -> id postfix | kw more stuff.
+
+Lexical
+
+kw -> 'aaa' .
+id -> ( 'a' - 'b' ) * .
+
+
+

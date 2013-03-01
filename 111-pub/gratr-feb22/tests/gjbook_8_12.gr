@@ -1,0 +1,16 @@
+# This grammar defines an LL(k+1) language that is not LL(k), according to Grune and Jacobs (page 255).
+
+gj812
+
+Start
+
+S
+
+Syntactic
+
+S1 : S -> a S A .
+S2 : A -> a b S .
+S3 : A -> a b .
+S4 : A -> c .
+
+

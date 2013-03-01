@@ -1,0 +1,11 @@
+(VAR x)
+
+(RULES
+q ->= r
+C (c (x)) -> S(x)
+B (b (x)) -> S(x)
+C (a (x)) -> C(x)
+a (x) -> C(x)
+B (a (x)) -> B(x)
+a (x) -> B(x)
+)

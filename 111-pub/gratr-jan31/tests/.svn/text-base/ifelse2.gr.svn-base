@@ -1,0 +1,21 @@
+ifelse
+
+Start
+
+u
+
+Syntactic
+
+% s: saturated if-then-else expressions
+% v: definitely unsaturated if-then-else expressions
+% u: either v or s
+
+IfElseS : s -> if s else s .
+Base : s -> b .
+
+IfS : u -> s .
+IfV : u -> v . 
+IfU : v -> if v .
+IfElseV : v -> if s else v .
+
+

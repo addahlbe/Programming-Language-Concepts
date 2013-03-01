@@ -1,0 +1,14 @@
+eg1
+
+Start
+
+s
+
+Syntactic
+
+S1 : s -> 'a' cs.
+S2 : s -> 'b' cs.
+
+Lexical
+
+cs -> 'c'+.

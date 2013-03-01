@@ -1,0 +1,15 @@
+expr
+
+Start
+
+expr
+%id
+
+Syntactic
+
+X : expr -> 'x'.
+Plus : expr -> expr '+' expr .
+
+
+
+

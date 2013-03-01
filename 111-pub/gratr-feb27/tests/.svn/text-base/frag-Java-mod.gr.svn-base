@@ -1,0 +1,41 @@
+frag
+
+Productions
+
+R85 : typeBound_plus_21 -> typeBound_plus_21 typeBound_plus_21.
+R86 : typeBound_plus_21 -> typeBound_20.
+R84 : typeBound_20 -> '&' type.
+R80_1 : typeParameters -> '<' Identifier '>'.
+R80_2_1 : typeParameters -> '<' Identifier 'extends' type typeBound_plus_21 '>'.
+R80_2_2 : typeParameters -> '<' Identifier 'extends' type '>'.
+R79_1 : typeParameters -> '<' Identifier typeParameters_plus_18 '>'.
+R79_2_1 : typeParameters -> '<' Identifier 'extends' type typeBound_plus_21 typeParameters_plus_18 '>'.
+R79_2_2 : typeParameters -> '<' Identifier 'extends' type typeParameters_plus_18 '>'.
+R77 : typeParameters_plus_18 -> typeParameters_plus_18 typeParameters_plus_18.
+R78_1 : typeParameters_plus_18 -> ',' Identifier.
+R78_2 : typeParameters_plus_18 -> ',' Identifier typeParameter_19.
+R75 : normalClassDeclaration -> 'class' Identifier classBody.
+R74 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_16 classBody.
+R73 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_15 classBody.
+R72 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_15 normalClassDeclaration_16 classBody.
+R71 : normalClassDeclaration -> 'class' Identifier typeParameters classBody.
+R70 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_16 classBody.
+R69 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_15 classBody.
+R68 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_15 normalClassDeclaration_16 classBody.
+R67 : normalClassDeclaration_16 -> 'implements' typeList.
+R66 : normalClassDeclaration_15 -> 'extends' type.
+
+
+Vars
+
+ x3 x2 x1 x0 x y z
+
+Rules
+
+R85(R85(x1, x2), x3) -> R85(x1, R85(x2, x3))
+R77(R77(x1, x2), x3) -> R77(x1, R77(x2, x3))
+dot(typeParameters_plus_18(x),dot(typeParameter_19,z)) -> dot(typeParameters_plus_18(un(x)),z)
+un(R78_1) -> R78_2
+un(R77(x,y)) -> R77(x,un(y))
+
+ 

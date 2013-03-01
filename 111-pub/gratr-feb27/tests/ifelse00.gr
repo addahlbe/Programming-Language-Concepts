@@ -1,0 +1,28 @@
+ifelse
+
+Whitespace
+
+ws
+
+Syntactic
+
+% saturated if-then-else expressions
+
+start -> sos s eos .
+
+IfElse : s -> if s else s .
+If : s -> if s .
+B : s -> b .
+Seq : s -> lc s+ rc.
+
+Lexical
+
+if => 'if' .
+else => 'else'.
+b => 'b'.
+lc => '{'.
+rc => '}'.
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .

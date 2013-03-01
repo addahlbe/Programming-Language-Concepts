@@ -1,0 +1,16 @@
+aut2
+
+Start
+
+S
+
+Productions
+
+1: S -> a a b A b B .
+2: A -> a q .
+3: B -> q b .
+4: q -> a .
+
+Vars
+
+Rules

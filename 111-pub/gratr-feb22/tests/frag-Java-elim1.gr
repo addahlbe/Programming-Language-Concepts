@@ -1,0 +1,86 @@
+frag
+
+Start
+
+normalClassDeclaration
+
+Productions
+
+Id0 : idList -> idList idList .
+Id1 : idList -> ',' Identifier .
+
+R272 : typeArgument -> '?'.
+R271_1 : typeArgument -> '?' 'super' type.
+R271_2 : typeArgument -> '?' 'extends' type.
+R267 : typeArgument -> type.
+R266 : typeArguments -> '<' typeArgument '>'.
+R265 : typeArguments -> '<' typeArgument typeArguments_plus_59 '>'.
+R263 : typeArguments_plus_59 -> typeArguments_plus_59 typeArguments_plus_59.
+R264_1 : typeArguments_plus_59 -> ',' typeArgument.
+
+R64 : typeParameter -> Identifier.
+R63_1 : typeParameter -> Identifier 'extends' type typeBound_plus_14.
+R63_2 : typeParameter -> Identifier 'extends' type.
+R61 : typeParameters -> '<' typeParameter '>'.
+R60 : typeParameters -> '<' typeParameter typeParameters_plus_11 '>'.
+R58 : typeParameters_plus_11 -> typeParameters_plus_11 typeParameters_plus_11.
+R59_1 : typeParameters_plus_11 -> ',' typeParameter.
+
+R259 : primitiveType -> 'double'.
+R258 : primitiveType -> 'float'.
+R257 : primitiveType -> 'long'.
+R256 : primitiveType -> 'int'.
+R255 : primitiveType -> 'short'.
+R254 : primitiveType -> 'byte'.
+R253 : primitiveType -> 'char'.
+R252 : primitiveType -> 'boolean'.
+R251 : classOrInterfaceType -> Identifier.
+R250 : classOrInterfaceType -> Identifier classOrInterfaceType_plus_57.
+R249 : classOrInterfaceType -> Identifier typeArguments.
+R248 : classOrInterfaceType -> Identifier typeArguments classOrInterfaceType_plus_57.
+R246 : classOrInterfaceType_plus_57 -> classOrInterfaceType_plus_57 classOrInterfaceType_plus_57.
+R247_1 : classOrInterfaceType_plus_57 -> '.' Identifier typeArguments.
+R247_2 : classOrInterfaceType_plus_57 -> '.' Identifier.
+R243 : type -> primitiveType.
+R242 : type -> primitiveType type_plus_55.
+R240 : type_plus_55 -> type_plus_55 type_plus_55.
+R241_1 : type_plus_55 -> '[' ']'.
+R238 : type -> classOrInterfaceType.
+
+R56 : normalClassDeclaration -> 'class' Identifier classBody.
+R55 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_9 classBody.
+R54 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_8 classBody.
+R53 : normalClassDeclaration -> 'class' Identifier normalClassDeclaration_8 normalClassDeclaration_9 classBody.
+R52 : normalClassDeclaration -> 'class' Identifier typeParameters classBody.
+R51 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_9 classBody.
+R50 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_8 classBody.
+R49 : normalClassDeclaration -> 'class' Identifier typeParameters normalClassDeclaration_8 normalClassDeclaration_9 classBody.
+R48 : normalClassDeclaration_9 -> 'implements' typeList.
+R47 : normalClassDeclaration_8 -> 'extends' type.
+
+
+Vars
+
+x5 x4 x3 x2 x1 x0
+
+Rules
+
+R58(R58(x1, x2), x3) -> R58(x1, R58(x2, x3))
+R263(R263(x1, x2), x3) -> R263(x1, R263(x2, x3))
+R246(R246(x1, x2), x3) -> R246(x1, R246(x2, x3))
+R240(R240(x1, x2), x3) -> R240(x1, R240(x2, x3))
+R235(R235(x1, x2), x3) -> R235(x1, R235(x2, x3))
+
+typeParameter(R64) -> typeArgument(R267(R238(R251)))
+typeParameters(R61(R64)) -> idList(Id1)
+typeArguments(R266(R267(R238(R251)))) -> idList(Id1)
+
+typeArguments_plus_59(R264_1(R267(R238(R251)))) -> idList(Id1)
+typeParameters_plus_11(R59_1(R64)) -> idList(Id1)
+
+dot(typeParameters_plus_11(x0), dot(typeArguments_plus_59(x1), x2)) -> 
+dot(idList(Id0(requireIdList(x0),requireIdList(x1))),x2)
+
+requireIdList(R264_1(R267(R238(R251)))) -> Id1
+
+Id0(Id0(x0,x1),x2) -> Id0(x0,Id0(x1,x2))

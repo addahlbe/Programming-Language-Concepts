@@ -1,0 +1,28 @@
+nlrk
+
+Productions
+
+Sc : S -> C c .
+Sb : S -> B b .
+C1 : C -> C a .
+C2 : C -> a .
+B1 : B -> B a .
+B2 : B -> a .
+
+Vars
+
+x y z
+
+Rules
+
+  B(x) -> C(x)
+  B2 -> C2
+  B1(x) -> C1(x)
+
+  dot(C(x),dot(C(y),z)) -> dot(C(unC(x,y)),z)
+  unC(C2,y) -> C1(y)
+  unC(C1(x),y) -> C1(unC(x,y))
+  unC(x,C1(y)) -> C1(unC(x,y))
+  unC(x, C2) -> C1(x)
+  unC(unC(x,y),z) -> unC(x,unC(y,z)) 
+

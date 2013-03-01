@@ -1,0 +1,57 @@
+from_antlr
+
+Start
+
+compilationUnit
+
+Whitespace
+
+ws
+
+Syntactic
+
+normalClassDeclaration
+    ->  'class' identifier typeParameters?
+        ('extends' type)?
+        ('implements' typeList)?
+        classBody
+    .
+
+typeParameters
+    ->   '<' typeParameter (',' typeParameter)* '>'
+    .
+
+typeParameter
+    ->   identifier ('extends' typeBound)?
+    .
+        
+typeBound
+    ->   type ('&' type)*
+    .
+
+type
+	->	classOrInterfaceType ('[' ']')*
+	|	primitiveType ('[' ']')*
+	.
+
+primitiveType
+   ->   'boolean'
+    |   'char'
+    |   'byte'
+    |   'short'
+    |   'int'
+    |   'long'
+    |   'float'
+    |   'double'
+    .
+
+Lexical 
+
+ws -> '\t' .
+ws -> '\n' .
+ws -> space .
+ws -> ws ws .
+
+identifier -> ( 'a' - 'z' ) + .
+
+classBody -> 'classBody' .

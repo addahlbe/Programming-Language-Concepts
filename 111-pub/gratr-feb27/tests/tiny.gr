@@ -1,0 +1,27 @@
+expr
+
+Start
+
+expr
+
+Syntactic
+
+Id : expr -> id.
+App : expr -> expr ws expr .
+
+Lexical 
+
+id -> ['a'-'b']+.
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+Vars
+
+x y z
+
+Rules
+
+App(App(x,y),z) -> App(x,App(y,z))

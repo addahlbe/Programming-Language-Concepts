@@ -1,0 +1,12 @@
+simplenum
+
+Start
+
+num
+
+Lexical 
+
+nonzero -> ['1' - '2'] .
+digit -> '0' | nonzero .
+
+num -> '0' | nonzero digit | nonzero digit digit .

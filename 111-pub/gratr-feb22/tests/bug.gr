@@ -1,0 +1,21 @@
+bug
+
+Start
+
+expr
+
+Syntactic
+
+Plus : expr -> mult '+' expr .
+ExprMult : expr -> mult .
+Times : mult -> atom '*' mult .
+ExprNeg : mult -> atom .
+Id : atom -> id .
+Num : atom -> num .
+Parens : atom -> '(' expr ')' .
+
+Lexical 
+
+id -> ['x'-'z']+.
+num -> ['0'-'9']+.
+

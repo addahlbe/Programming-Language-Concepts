@@ -1,0 +1,36 @@
+suffix
+
+Start
+
+ss
+
+Productions
+
+0 : s -> a s b.
+1 : s -> c s b.
+2 : s -> d.
+01 : ss -> a s b.
+13 : ss -> b.
+11 : ss -> c s b.
+21 : ss -> d.
+12 : ss -> ss b.
+
+
+Vars
+
+ x0
+
+Rules
+
+ss(21) -> s(2)
+
+ss(11(x0)) -> s(1(x0))
+
+ss(01(x0)) -> s(0(x0))
+
+
+Skip
+
+
+
+ 

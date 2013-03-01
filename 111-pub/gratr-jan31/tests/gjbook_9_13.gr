@@ -1,0 +1,13 @@
+# This grammar is not LR(k) for any k, according to Grune and Jacobs (page 280).
+
+gj913
+
+Start
+
+S
+
+Syntactic
+
+R1 : S -> a S a .
+R2 : S -> a .
+

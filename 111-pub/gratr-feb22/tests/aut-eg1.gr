@@ -1,0 +1,17 @@
+aut1
+
+Productions
+
+S : q -> q q .
+0 : q -> B .
+1 : q -> A .
+2 : A -> a b .
+3 : B -> b c .
+
+Vars
+
+x y z
+
+Rules
+
+S(S(x,y),z) -> S(x,S(y,z))

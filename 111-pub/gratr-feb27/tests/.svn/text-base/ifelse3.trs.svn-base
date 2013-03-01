@@ -1,0 +1,13 @@
+(VAR x2 x1 x0)
+
+(RULES
+
+[IfElseS] dot(if, dot(s(x0), dot(else, dot(s(x1), x2)))) -> dot(s(IfElseS(x0, x1)), x2)
+[Base] dot(b, x0) -> dot(s(Base), x0)
+[Seq] dot(b, dot(s(x0), x1)) -> dot(s(Seq(x0)), x1)
+[IfS] dot(s(x0), x1) -> dot(u(IfS(x0)), x1)
+[IfV] dot(v(x0), x1) -> dot(u(IfV(x0)), x1)
+[IfU] dot(if, dot(v(x0), x1)) -> dot(v(IfU(x0)), x1)
+[IfElseV] dot(if, dot(s(x0), dot(else, dot(v(x1), x2)))) -> dot(v(IfElseV(x0, x1)), x2)
+[IfElseB] dot(b, dot(v(x0), x1)) -> dot(u(IfElseB(x0)), x1)
+)

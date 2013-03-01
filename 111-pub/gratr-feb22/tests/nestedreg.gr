@@ -1,0 +1,11 @@
+simplenum
+
+Start
+
+asbas
+
+Lexical 
+
+asbas => (as bs)+.
+as => 'a'+.
+bs => 'b'+.

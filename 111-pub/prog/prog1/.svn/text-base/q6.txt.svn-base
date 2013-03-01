@@ -1,0 +1,5 @@
+f(x,y) = x+y+y ;;
+
+g(x) = x  ;;
+
+thefun(arga,argb) = arga+argb+y+z;;

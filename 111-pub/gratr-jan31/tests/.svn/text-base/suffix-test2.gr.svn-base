@@ -1,0 +1,18 @@
+suffix
+
+Start
+
+s
+
+Productions
+
+0 : s -> a s b .
+2 : s -> a b .
+
+Vars
+
+x0
+
+Rules
+
+ss(01(x0)) -> s(0(x0))

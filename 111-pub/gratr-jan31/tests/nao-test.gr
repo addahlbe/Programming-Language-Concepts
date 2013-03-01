@@ -1,0 +1,15 @@
+expr
+
+Productions
+
+Id : term -> id .
+Plus : expr -> term plus expr .
+Term : expr -> term .
+
+Vars
+
+x y z
+
+Rules
+
+#dot(expr(x0), eos) -> x0

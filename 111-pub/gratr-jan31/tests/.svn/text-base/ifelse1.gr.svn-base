@@ -1,0 +1,24 @@
+ifelse
+
+Start
+
+u
+
+Productions
+
+# saturated if-then-else expressions
+
+IfElseS : s -> if s else s .
+Base : s -> b .
+
+# definitely unsaturated if-then-else expressions
+IfS : u -> if s .
+IfU : u -> if u .
+IfElseU : u -> if s else u .
+
+Vars
+
+w x y z ww zz
+
+Rules
+

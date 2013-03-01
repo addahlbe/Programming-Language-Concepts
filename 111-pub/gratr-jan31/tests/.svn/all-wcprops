@@ -1,0 +1,677 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests
+END
+expr-inv.trs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/expr-inv.trs
+END
+nestcom.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nestcom.gr
+END
+not-lr-k-srs.trs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/not-lr-k-srs.trs
+END
+small.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/small.gr
+END
+lam.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lam.gr
+END
+frag-tlam.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-tlam.gr
+END
+kr.gr
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/kr.gr
+END
+asbas3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/asbas3.gr
+END
+bug.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/bug.gr
+END
+mini1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/mini1.gr
+END
+threedigs.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/threedigs.gr
+END
+foo.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/foo.gr
+END
+ifelse3.trs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse3.trs
+END
+ifelse3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse3.gr
+END
+list3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/list3.gr
+END
+quoted.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/quoted.gr
+END
+test3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test3.gr
+END
+frag-Java-elim1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-elim1.gr
+END
+not-lr-k.trs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/not-lr-k.trs
+END
+aut-eg2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/aut-eg2.gr
+END
+elim-Java.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/elim-Java.gr
+END
+ifelse00.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse00.gr
+END
+scrap.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/scrap.gr
+END
+while.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/while.gr
+END
+Java.orig
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Java.orig
+END
+simplenum.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/simplenum.gr
+END
+asbas2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/asbas2.gr
+END
+regexp1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/regexp1.gr
+END
+expr.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/expr.gr
+END
+id3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/id3.gr
+END
+tlam2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam2.gr
+END
+a.gr
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/a.gr
+END
+suffix-test.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/suffix-test.gr
+END
+frag-Java-elim.gr
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-elim.gr
+END
+frag-Java-elim.trs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-elim.trs
+END
+tiny.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tiny.gr
+END
+sublist.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/sublist.gr
+END
+Java-srs.trs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Java-srs.trs
+END
+fun.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/fun.gr
+END
+ifelse2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse2.gr
+END
+lr_countereg.gra
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lr_countereg.gra
+END
+nao-test.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nao-test.gr
+END
+nao-test.trs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nao-test.trs
+END
+regexp.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/regexp.gr
+END
+id.gr
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/id.gr
+END
+list2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/list2.gr
+END
+frag-Java-mod2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-mod2.gr
+END
+test2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test2.gr
+END
+frag-Java-elim0.gr
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-elim0.gr
+END
+lam-inv.trs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lam-inv.trs
+END
+aut-eg1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/aut-eg1.gr
+END
+gjbook_8_12.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/gjbook_8_12.gr
+END
+ifelse.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse.gr
+END
+JavaMod-no-expr.gr
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/JavaMod-no-expr.gr
+END
+balparens.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/balparens.gr
+END
+asbas1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/asbas1.gr
+END
+Java-elim-srs.gr
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Java-elim-srs.gr
+END
+tlam-frag.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam-frag.gr
+END
+list.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/list.gr
+END
+frag-Java-mod.gr
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java-mod.gr
+END
+tlam-alt.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam-alt.gr
+END
+gjbook_10_2_1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/gjbook_10_2_1.gr
+END
+numcomma.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/numcomma.gr
+END
+id2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/id2.gr
+END
+test.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test.gr
+END
+nestedreg.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nestedreg.gr
+END
+regression.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/regression.sh
+END
+Javafoo.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Javafoo.gr
+END
+elim-test-elim.gr
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/elim-test-elim.gr
+END
+ifelse1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse1.gr
+END
+lr_countereg.gr
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lr_countereg.gr
+END
+mini.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/mini.gr
+END
+tlam.trs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam.trs
+END
+lr1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lr1.gr
+END
+num.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/num.gr
+END
+chars.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/chars.gr
+END
+test2mod.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test2mod.gr
+END
+gjbook_8_11.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/gjbook_8_11.gr
+END
+suffix-test2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/suffix-test2.gr
+END
+suffix-test2-suffix.gr
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/suffix-test2-suffix.gr
+END
+gjbook_9_13.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/gjbook_9_13.gr
+END
+gjbook_9_23.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/gjbook_9_23.gr
+END
+sublist2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/sublist2.gr
+END
+test.chars
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test.chars
+END
+lam.trs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/lam.trs
+END
+list.trs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/list.trs
+END
+micro-Java-elim.gr
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/micro-Java-elim.gr
+END
+tlam2a.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam2a.gr
+END
+kw.gr
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/kw.gr
+END
+JavaMod.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/JavaMod.gr
+END
+Java.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Java.gr
+END
+ab.gr
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ab.gr
+END
+confno.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/confno.gr
+END
+suffix-test-suffix.gr
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/suffix-test-suffix.gr
+END
+conf.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/conf.gr
+END
+nfa1.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nfa1.gr
+END
+test-approx.gr
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/test-approx.gr
+END
+ifelse0.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse0.gr
+END
+micro-Java.gr
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/micro-Java.gr
+END
+ifelse4.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/ifelse4.gr
+END
+tlam.gr
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/tlam.gr
+END
+frag-Java.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/frag-Java.gr
+END
+micro-Java-elim2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/micro-Java-elim2.gr
+END
+list4.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/list4.gr
+END
+expr2.gr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/expr2.gr
+END
+not.gr
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/not.gr
+END
+elim-test.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/elim-test.gr
+END
+not-lr-k.gr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/not-lr-k.gr
+END
+aut-eg3.gr
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/aut-eg3.gr
+END
+Java-elim.gr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/Java-elim.gr
+END
+nao-eg.gr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nao-eg.gr
+END
+nao-eg.trs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/clc/!svn/ver/11726/class/2013/111-pub/gratr-jan31/tests/nao-eg.trs
+END

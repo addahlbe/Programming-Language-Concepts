@@ -1,0 +1,35 @@
+suffix
+
+Start
+
+ss
+
+Productions
+
+2 : s -> a b.
+0 : s -> a s b.
+21 : ss -> a b.
+01 : ss -> a s b.
+22 : ss -> b.
+02 : ss -> ss b.
+
+
+Vars
+
+ x1 x0 x y z
+
+Rules
+
+ss(01(x1)) -> s(0(x1))
+ss(21) -> s(2)
+dot(ss(x),dot(ss(y),z)) -> dot(ss(un(x,y)),z)
+un(02(x),y) -> 02(un(x,y))
+un(x,02(y)) -> 02(un(x,y))
+un(un(x,y),z) -> un(x,un(y,z))
+
+
+Skip
+
+
+
+ 

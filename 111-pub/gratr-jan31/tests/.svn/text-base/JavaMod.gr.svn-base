@@ -1,0 +1,546 @@
+from_antlr
+
+Start
+
+compilationUnit
+
+Syntactic
+
+R489 : arguments -> '(' ')'.
+R488 : arguments -> '(' expressionList ')'.
+R487 : superSuffix -> '.' Identifier arguments.
+R486 : superSuffix -> '.' Identifier.
+R485 : superSuffix -> arguments.
+R484 : selector -> '[' expression ']'.
+R483 : selector -> '.' 'new' innerCreator.
+R482 : selector -> '.' 'super' superSuffix.
+R481 : selector -> '.' 'this'.
+R480 : selector -> '.' Identifier arguments.
+R479 : selector -> '.' Identifier.
+R478 : nonWildcardTypeArguments -> '<' typeList '>'.
+R477 : explicitGenericInvocation -> nonWildcardTypeArguments Identifier arguments.
+R476 : classCreatorRest -> arguments classBody.
+R475 : classCreatorRest -> arguments.
+R474 : arrayCreatorRest -> '[' expression ']' methodDeclaratorRest_plus_9.
+R473 : arrayCreatorRest -> '[' expression ']' identifierSuffix_plus_44 methodDeclaratorRest_plus_9.
+R472 : arrayCreatorRest -> '[' expression ']' identifierSuffix_plus_44.
+R471 : arrayCreatorRest -> '[' expression ']'.
+R470 : arrayCreatorRest -> '[' ']' arrayInitializer.
+R469 : arrayCreatorRest -> '[' ']' methodDeclaratorRest_plus_9 arrayInitializer.
+R468 : innerCreator -> nonWildcardTypeArguments Identifier classCreatorRest.
+R467 : createdName -> primitiveType.
+R466 : createdName -> classOrInterfaceType.
+R465 : creator -> createdName classCreatorRest.
+R464 : creator -> createdName arrayCreatorRest.
+R463 : creator -> nonWildcardTypeArguments createdName classCreatorRest.
+R462 : identifierSuffix -> '.' 'new' innerCreator.
+R461 : identifierSuffix -> '.' 'super' arguments.
+R460 : identifierSuffix -> '.' 'this'.
+R459 : identifierSuffix -> '.' explicitGenericInvocation.
+R458 : identifierSuffix -> '.' 'class'.
+R457 : identifierSuffix -> arguments.
+R456 : identifierSuffix -> identifierSuffix_plus_44.
+R455 : identifierSuffix -> methodDeclaratorRest_plus_9 '.' 'class'.
+R453 : identifierSuffix_plus_44 -> identifierSuffix_plus_44 identifierSuffix_plus_44.
+R454 : identifierSuffix_plus_44 -> '[' expression ']'.
+R452 : primary -> 'void' '.' 'class'.
+R451 : primary -> primitiveType methodDeclaratorRest_plus_9 '.' 'class'.
+R450 : primary -> primitiveType '.' 'class'.
+R449 : primary -> Identifier identifierSuffix.
+R448 : primary -> Identifier qualifiedName_plus_21 identifierSuffix.
+R447 : primary -> Identifier qualifiedName_plus_21.
+R446 : primary -> Identifier.
+R445 : primary -> 'new' creator.
+R444 : primary -> literal.
+R443 : primary -> 'super' superSuffix.
+R442 : primary -> 'this' identifierSuffix.
+R441 : primary -> 'this' qualifiedName_plus_21 identifierSuffix.
+R440 : primary -> 'this' qualifiedName_plus_21.
+R439 : primary -> 'this'.
+R438 : primary -> parExpression.
+R437 : castExpression -> '(' expression ')' unaryExpressionNotPlusMinus.
+R436 : castExpression -> '(' type ')' unaryExpressionNotPlusMinus.
+R435 : castExpression -> '(' primitiveType ')' unaryExpression.
+R434 : unaryExpressionNotPlusMinus -> primary '--'.
+R433 : unaryExpressionNotPlusMinus -> primary '++'.
+R432 : unaryExpressionNotPlusMinus -> primary unaryExpressionNotPlusMinus_plus_43 '--'.
+R431 : unaryExpressionNotPlusMinus -> primary unaryExpressionNotPlusMinus_plus_43 '++'.
+R430 : unaryExpressionNotPlusMinus -> primary unaryExpressionNotPlusMinus_plus_43.
+R429 : unaryExpressionNotPlusMinus -> primary.
+R428 : unaryExpressionNotPlusMinus -> castExpression.
+R427 : unaryExpressionNotPlusMinus -> '!' unaryExpression.
+R426 : unaryExpressionNotPlusMinus -> '~' unaryExpression.
+R424 : unaryExpressionNotPlusMinus_plus_43 -> unaryExpressionNotPlusMinus_plus_43 unaryExpressionNotPlusMinus_plus_43.
+R425 : unaryExpressionNotPlusMinus_plus_43 -> selector.
+R423 : unaryExpression -> unaryExpressionNotPlusMinus.
+R422 : unaryExpression -> '--' unaryExpression.
+R421 : unaryExpression -> '++' unaryExpression.
+R420 : unaryExpression -> '-' unaryExpression.
+R419 : unaryExpression -> '+' unaryExpression.
+R418 : multiplicativeExpression -> unaryExpression multiplicativeExpression_plus_42.
+R417 : multiplicativeExpression -> unaryExpression.
+R415 : multiplicativeExpression_plus_42 -> multiplicativeExpression_plus_42 multiplicativeExpression_plus_42.
+R416 : multiplicativeExpression_plus_42 -> multiplicativeExpression_41.
+R414 : multiplicativeExpression_41 -> '*' unaryExpression.
+R413 : multiplicativeExpression_41 -> '/' unaryExpression.
+R412 : multiplicativeExpression_41 -> '%' unaryExpression.
+R411 : additiveExpression -> multiplicativeExpression additiveExpression_plus_40.
+R410 : additiveExpression -> multiplicativeExpression.
+R408 : additiveExpression_plus_40 -> additiveExpression_plus_40 additiveExpression_plus_40.
+R409 : additiveExpression_plus_40 -> additiveExpression_39.
+R407 : additiveExpression_39 -> '+' multiplicativeExpression.
+R406 : additiveExpression_39 -> '-' multiplicativeExpression.
+R405 : shiftOp -> '>>'.
+R404 : shiftOp -> '>>>'.
+R403 : shiftOp -> '<<'.
+R402 : shiftExpression -> additiveExpression shiftExpression_plus_38.
+R401 : shiftExpression -> additiveExpression.
+R399 : shiftExpression_plus_38 -> shiftExpression_plus_38 shiftExpression_plus_38.
+R400 : shiftExpression_plus_38 -> shiftOp additiveExpression.
+R398 : relationalOp -> '>'.
+R397 : relationalOp -> '<'.
+R396 : relationalOp -> '>='.
+R395 : relationalOp -> '<='.
+R394 : relationalExpression -> shiftExpression relationalExpression_plus_37.
+R393 : relationalExpression -> shiftExpression.
+R391 : relationalExpression_plus_37 -> relationalExpression_plus_37 relationalExpression_plus_37.
+R392 : relationalExpression_plus_37 -> relationalOp shiftExpression.
+R390 : instanceOfExpression -> relationalExpression 'instanceof' type.
+R389 : instanceOfExpression -> relationalExpression.
+R388 : equalityExpression -> instanceOfExpression equalityExpression_plus_36.
+R387 : equalityExpression -> instanceOfExpression.
+R385 : equalityExpression_plus_36 -> equalityExpression_plus_36 equalityExpression_plus_36.
+R386 : equalityExpression_plus_36 -> equalityExpression_35.
+R384 : equalityExpression_35 -> '==' instanceOfExpression.
+R383 : equalityExpression_35 -> '!=' instanceOfExpression.
+R382 : andExpression -> equalityExpression andExpression_plus_34.
+R381 : andExpression -> equalityExpression.
+R379 : andExpression_plus_34 -> andExpression_plus_34 andExpression_plus_34.
+R380 : andExpression_plus_34 -> '&' equalityExpression.
+R378 : exclusiveOrExpression -> andExpression exclusiveOrExpression_plus_33.
+R377 : exclusiveOrExpression -> andExpression.
+R375 : exclusiveOrExpression_plus_33 -> exclusiveOrExpression_plus_33 exclusiveOrExpression_plus_33.
+R376 : exclusiveOrExpression_plus_33 -> '^' andExpression.
+R374 : inclusiveOrExpression -> exclusiveOrExpression inclusiveOrExpression_plus_32.
+R373 : inclusiveOrExpression -> exclusiveOrExpression.
+R371 : inclusiveOrExpression_plus_32 -> inclusiveOrExpression_plus_32 inclusiveOrExpression_plus_32.
+R372 : inclusiveOrExpression_plus_32 -> '|' exclusiveOrExpression.
+R370 : conditionalAndExpression -> inclusiveOrExpression conditionalAndExpression_plus_31.
+R369 : conditionalAndExpression -> inclusiveOrExpression.
+R367 : conditionalAndExpression_plus_31 -> conditionalAndExpression_plus_31 conditionalAndExpression_plus_31.
+R368 : conditionalAndExpression_plus_31 -> '&&' inclusiveOrExpression.
+R366 : conditionalOrExpression -> conditionalAndExpression conditionalOrExpression_plus_30.
+R365 : conditionalOrExpression -> conditionalAndExpression.
+R363 : conditionalOrExpression_plus_30 -> conditionalOrExpression_plus_30 conditionalOrExpression_plus_30.
+R364 : conditionalOrExpression_plus_30 -> '||' conditionalAndExpression.
+R362 : conditionalExpression -> conditionalOrExpression '?' expression ':' expression.
+R361 : conditionalExpression -> conditionalOrExpression.
+R360 : assignmentOperator -> '>>='.
+R359 : assignmentOperator -> '>>>='.
+R358 : assignmentOperator -> '<<='.
+R357 : assignmentOperator -> '%='.
+R356 : assignmentOperator -> '^='.
+R355 : assignmentOperator -> '|='.
+R354 : assignmentOperator -> '&='.
+R353 : assignmentOperator -> '/='.
+R352 : assignmentOperator -> '*='.
+R351 : assignmentOperator -> '-='.
+R350 : assignmentOperator -> '+='.
+R349 : assignmentOperator -> '='.
+R348 : expression -> conditionalExpression assignmentOperator expression.
+R347 : expression -> conditionalExpression.
+R346 : constantExpression -> expression.
+R345 : statementExpression -> expression.
+R344 : expressionList -> expression expressionList_plus_29.
+R343 : expressionList -> expression.
+R341 : expressionList_plus_29 -> expressionList_plus_29 expressionList_plus_29.
+R342 : expressionList_plus_29 -> ',' expression.
+R340 : parExpression -> '(' expression ')'.
+R339 : forUpdate -> expressionList.
+R338 : enhancedForControl -> variableModifiers type Identifier ':' expression.
+R337 : forInit -> expressionList.
+R336 : forInit -> localVariableDeclaration.
+R335 : forControl -> forInit ';' expression ';' forUpdate.
+R334 : forControl -> forInit ';' ';' forUpdate.
+R333 : forControl -> forInit ';' ';'.
+R332 : forControl -> forInit ';' expression ';'.
+R331 : forControl -> enhancedForControl.
+R330 : switchLabel -> 'default' ':'.
+R329 : switchLabel -> 'case' enumConstantName ':'.
+R328 : switchLabel -> 'case' constantExpression ':'.
+R327 : switchBlockStatementGroup -> switchBlockStatementGroup_plus_28 constructorBody_plus_20.
+R326 : switchBlockStatementGroup -> switchBlockStatementGroup_plus_28.
+R324 : switchBlockStatementGroup_plus_28 -> switchBlockStatementGroup_plus_28 switchBlockStatementGroup_plus_28.
+R325 : switchBlockStatementGroup_plus_28 -> switchLabel.
+R323 : switchBlockStatementGroups -> switchBlockStatementGroups_plus_27.
+R321 : switchBlockStatementGroups_plus_27 -> switchBlockStatementGroups_plus_27 switchBlockStatementGroups_plus_27.
+R322 : switchBlockStatementGroups_plus_27 -> switchBlockStatementGroup.
+R320 : formalParameter -> variableModifiers type variableDeclaratorId.
+R319 : catchClause -> 'catch' '(' formalParameter ')' block.
+R318 : catches -> catchClause catches_plus_26.
+R317 : catches -> catchClause.
+R315 : catches_plus_26 -> catches_plus_26 catches_plus_26.
+R316 : catches_plus_26 -> catchClause.
+R314 : statement -> Identifier ':' statement.
+R313 : statement -> statementExpression ';'.
+R312 : statement -> ';'.
+R311 : statement -> 'continue' ';'.
+R310 : statement -> 'continue' Identifier ';'.
+R309 : statement -> 'break' ';'.
+R308 : statement -> 'break' Identifier ';'.
+R307 : statement -> 'throw' expression ';'.
+R306 : statement -> 'return' ';'.
+R305 : statement -> 'return' expression ';'.
+R304 : statement -> 'synchronized' parExpression block.
+R303 : statement -> 'switch' parExpression '{' '}'.
+R302 : statement -> 'switch' parExpression '{' switchBlockStatementGroups '}'.
+R301 : statement -> 'try' block 'finally' block.
+R300 : statement -> 'try' block catches.
+R299 : statement -> 'try' block catches 'finally' block.
+R298 : statement -> 'do' statement 'while' parExpression ';'.
+R297 : statement -> 'while' parExpression statement.
+R296 : statement -> 'for' '(' forControl ')' statement.
+R295 : statement -> 'if' parExpression statement 'else' statement.
+R294 : statement -> 'if' parExpression statement.
+R293 : statement -> ASSERT expression ';'.
+R292 : statement -> ASSERT expression ':' expression ';'.
+R291 : statement -> block.
+R290 : localVariableDeclaration -> variableModifiers type variableDeclarators.
+R289 : localVariableDeclarationStatement -> localVariableDeclaration ';'.
+R288 : blockStatement -> statement.
+R287 : blockStatement -> classOrInterfaceDeclaration.
+R286 : blockStatement -> localVariableDeclarationStatement.
+R285 : block -> '{' '}'.
+R284 : block -> '{' constructorBody_plus_20 '}'.
+R283 : defaultValue -> 'default' elementValue.
+R282 : annotationConstantRest -> variableDeclarators.
+R281 : annotationMethodRest -> Identifier '(' ')' defaultValue.
+R280 : annotationMethodRest -> Identifier '(' ')'.
+R279 : annotationMethodOrConstantRest -> annotationConstantRest.
+R278 : annotationMethodOrConstantRest -> annotationMethodRest.
+R277 : annotationTypeElementRest -> annotationTypeDeclaration ';'.
+R276 : annotationTypeElementRest -> annotationTypeDeclaration.
+R275 : annotationTypeElementRest -> enumDeclaration ';'.
+R274 : annotationTypeElementRest -> enumDeclaration.
+R273 : annotationTypeElementRest -> normalInterfaceDeclaration ';'.
+R272 : annotationTypeElementRest -> normalInterfaceDeclaration.
+R271 : annotationTypeElementRest -> normalClassDeclaration ';'.
+R270 : annotationTypeElementRest -> normalClassDeclaration.
+R269 : annotationTypeElementRest -> type annotationMethodOrConstantRest ';'.
+R268 : annotationTypeElementDeclaration -> modifiers annotationTypeElementRest.
+R267 : annotationTypeBody -> '{' '}'.
+R266 : annotationTypeBody -> '{' annotationTypeBody_plus_25 '}'.
+R264 : annotationTypeBody_plus_25 -> annotationTypeBody_plus_25 annotationTypeBody_plus_25.
+R265 : annotationTypeBody_plus_25 -> annotationTypeElementDeclaration.
+R263 : annotationTypeDeclaration -> '@' 'interface' Identifier annotationTypeBody.
+R262 : elementValueArrayInitializer -> '{' '}'.
+R261 : elementValueArrayInitializer -> '{' elementValue '}'.
+R260 : elementValueArrayInitializer -> '{' elementValue elementValueArrayInitializer_plus_24 '}'.
+R259 : elementValueArrayInitializer -> '{' elementValue elementValueArrayInitializer_plus_24 ',' '}'.
+R258 : elementValueArrayInitializer -> '{' elementValue ',' '}'.
+R257 : elementValueArrayInitializer -> '{' ',' '}'.
+R255 : elementValueArrayInitializer_plus_24 -> elementValueArrayInitializer_plus_24 elementValueArrayInitializer_plus_24.
+R256 : elementValueArrayInitializer_plus_24 -> ',' elementValue.
+R254 : elementValue -> elementValueArrayInitializer.
+R253 : elementValue -> annotation.
+R252 : elementValue -> conditionalExpression.
+R251 : elementValuePair -> Identifier '=' elementValue.
+R250 : elementValuePairs -> elementValuePair elementValuePairs_plus_23.
+R249 : elementValuePairs -> elementValuePair.
+R247 : elementValuePairs_plus_23 -> elementValuePairs_plus_23 elementValuePairs_plus_23.
+R248 : elementValuePairs_plus_23 -> ',' elementValuePair.
+R246 : annotationName -> Identifier qualifiedName_plus_21.
+R245 : annotationName -> Identifier.
+R244 : annotation -> '@' annotationName '(' ')'.
+R243 : annotation -> '@' annotationName '(' elementValuePairs ')'.
+R242 : annotation -> '@' annotationName '(' elementValue ')'.
+R241 : annotation -> '@' annotationName.
+R240 : annotations -> annotations_plus_22.
+R238 : annotations_plus_22 -> annotations_plus_22 annotations_plus_22.
+R239 : annotations_plus_22 -> annotation.
+R237 : booleanLiteral -> 'false'.
+R236 : booleanLiteral -> 'true'.
+R235 : integerLiteral -> DecimalLiteral.
+R234 : integerLiteral -> OctalLiteral.
+R233 : integerLiteral -> HexLiteral.
+R232 : literal -> 'null'.
+R231 : literal -> booleanLiteral.
+R230 : literal -> StringLiteral.
+R229 : literal -> CharacterLiteral.
+R228 : literal -> FloatingPointLiteral.
+R227 : literal -> integerLiteral.
+R226 : qualifiedName -> Identifier qualifiedName_plus_21.
+R225 : qualifiedName -> Identifier.
+R223 : qualifiedName_plus_21 -> qualifiedName_plus_21 qualifiedName_plus_21.
+R224 : qualifiedName_plus_21 -> '.' Identifier.
+R222 : explicitConstructorInvocation -> primary '.' 'super' arguments ';'.
+R221 : explicitConstructorInvocation -> primary '.' nonWildcardTypeArguments 'super' arguments ';'.
+R220 : explicitConstructorInvocation -> nonWildcardTypeArguments 'super' arguments ';'.
+R219 : explicitConstructorInvocation -> nonWildcardTypeArguments 'this' arguments ';'.
+R218 : constructorBody -> '{' '}'.
+R217 : constructorBody -> '{' explicitConstructorInvocation '}'.
+R216 : constructorBody -> '{' explicitConstructorInvocation constructorBody_plus_20 '}'.
+R215 : constructorBody -> '{' constructorBody_plus_20 '}'.
+R213 : constructorBody_plus_20 -> constructorBody_plus_20 constructorBody_plus_20.
+R214 : constructorBody_plus_20 -> blockStatement.
+R212 : methodBody -> block.
+R211 : formalParameterDeclsRest -> '...' variableDeclaratorId.
+R210 : formalParameterDeclsRest -> variableDeclaratorId ',' formalParameterDecls.
+R209 : formalParameterDeclsRest -> variableDeclaratorId.
+R208 : formalParameterDecls -> variableModifiers type formalParameterDeclsRest.
+R207 : formalParameters -> '(' ')'.
+R206 : formalParameters -> '(' formalParameterDecls ')'.
+R205 : qualifiedNameList -> qualifiedName qualifiedNameList_plus_19.
+R204 : qualifiedNameList -> qualifiedName.
+R202 : qualifiedNameList_plus_19 -> qualifiedNameList_plus_19 qualifiedNameList_plus_19.
+R203 : qualifiedNameList_plus_19 -> ',' qualifiedName.
+R201 : typeArgument -> '?' 'extends' type.
+R200 : typeArgument -> '?' 'super' type.
+R199 : typeArgument -> '?'.
+R198 : typeArgument -> type.
+R197 : typeArguments -> '<' typeArgument '>'.
+R196 : typeArguments -> '<' typeArgument typeArguments_plus_18 '>'.
+R194 : typeArguments_plus_18 -> typeArguments_plus_18 typeArguments_plus_18.
+R195 : typeArguments_plus_18 -> ',' typeArgument.
+R193 : primitiveType -> 'double'.
+R192 : primitiveType -> 'float'.
+R191 : primitiveType -> 'long'.
+R190 : primitiveType -> 'int'.
+R189 : primitiveType -> 'short'.
+R188 : primitiveType -> 'byte'.
+R187 : primitiveType -> 'char'.
+R186 : primitiveType -> 'boolean'.
+R185 : classOrInterfaceType -> Identifier classOrInterfaceType_plus_17.
+R184 : classOrInterfaceType -> Identifier typeArguments classOrInterfaceType_plus_17.
+R183 : classOrInterfaceType -> Identifier typeArguments.
+R182 : classOrInterfaceType -> Identifier.
+R180 : classOrInterfaceType_plus_17 -> classOrInterfaceType_plus_17 classOrInterfaceType_plus_17.
+R181 : classOrInterfaceType_plus_17 -> classOrInterfaceType_16.
+R179 : classOrInterfaceType_16 -> '.' Identifier typeArguments.
+R178 : classOrInterfaceType_16 -> '.' Identifier.
+R177 : type -> primitiveType methodDeclaratorRest_plus_9.
+R176 : type -> primitiveType.
+R175 : type -> classOrInterfaceType methodDeclaratorRest_plus_9.
+R174 : type -> classOrInterfaceType.
+R173 : typeName -> qualifiedName.
+R172 : enumConstantName -> Identifier.
+R171 : packageOrTypeName -> qualifiedName.
+R170 : variableModifier -> annotation.
+R169 : variableModifier -> 'final'.
+R168 : classOrInterfaceModifier -> 'strictfp'.
+R167 : classOrInterfaceModifier -> 'static'.
+R166 : classOrInterfaceModifier -> 'abstract'.
+R165 : classOrInterfaceModifier -> 'private'.
+R164 : classOrInterfaceModifier -> 'protected'.
+R163 : classOrInterfaceModifier -> 'public'.
+R162 : modifier -> 'volatile'.
+R161 : modifier -> 'transient'.
+R160 : modifier -> 'synchronized'.
+R159 : modifier -> 'native'.
+R158 : variableModifiers -> variableModifiers_plus_15.
+R156 : variableModifiers_plus_15 -> variableModifiers_plus_15 variableModifiers_plus_15.
+R157 : variableModifiers_plus_15 -> variableModifier.
+R155 : classOrInterfaceModifiers -> variableModifiers.
+R154 : classOrInterfaceModifiers -> classOrInterfaceModifiers_plus_14.
+R152 : classOrInterfaceModifiers_plus_14 -> classOrInterfaceModifiers_plus_14 classOrInterfaceModifiers_plus_14.
+R153 : classOrInterfaceModifiers_plus_14 -> classOrInterfaceModifier.
+R151 : modifiers -> classOrInterfaceModifiers.
+R150 : modifiers -> modifiers_plus_13.
+R148 : modifiers_plus_13 -> modifiers_plus_13 modifiers_plus_13.
+R149 : modifiers_plus_13 -> modifier.
+R147 : arrayInitializer -> '{' '}'.
+R146 : arrayInitializer -> '{' variableInitializer '}'.
+R145 : arrayInitializer -> '{' variableInitializer arrayInitializer_plus_12 '}'.
+R144 : arrayInitializer -> '{' variableInitializer arrayInitializer_plus_12 ',' '}'.
+R143 : arrayInitializer -> '{' variableInitializer ',' '}'.
+R141 : arrayInitializer_plus_12 -> arrayInitializer_plus_12 arrayInitializer_plus_12.
+R142 : arrayInitializer_plus_12 -> ',' variableInitializer.
+R140 : variableInitializer -> expression.
+R139 : variableInitializer -> arrayInitializer.
+R138 : variableDeclaratorId -> Identifier methodDeclaratorRest_plus_9.
+R137 : variableDeclaratorId -> Identifier.
+R136 : constantDeclaratorRest -> methodDeclaratorRest_plus_9 '=' variableInitializer.
+R135 : constantDeclaratorsRest -> constantDeclaratorRest constantDeclaratorsRest_plus_11.
+R134 : constantDeclaratorsRest -> constantDeclaratorRest.
+R132 : constantDeclaratorsRest_plus_11 -> constantDeclaratorsRest_plus_11 constantDeclaratorsRest_plus_11.
+R133 : constantDeclaratorsRest_plus_11 -> ',' constantDeclarator.
+R131 : variableDeclarator -> variableDeclaratorId '=' variableInitializer.
+R130 : variableDeclarator -> variableDeclaratorId.
+R129 : variableDeclarators -> variableDeclarator variableDeclarators_plus_10.
+R128 : variableDeclarators -> variableDeclarator.
+R126 : variableDeclarators_plus_10 -> variableDeclarators_plus_10 variableDeclarators_plus_10.
+R127 : variableDeclarators_plus_10 -> ',' variableDeclarator.
+R125 : constantDeclarator -> Identifier constantDeclaratorRest.
+R124 : constructorDeclaratorRest -> formalParameters constructorBody.
+R123 : constructorDeclaratorRest -> formalParameters 'throws' qualifiedNameList constructorBody.
+R122 : voidInterfaceMethodDeclaratorRest -> formalParameters interfaceMethodDeclaratorFinish.
+R121 : interfaceGenericMethodDecl -> typeParameters 'void' Identifier interfaceMethodDeclaratorRest.
+R120 : interfaceGenericMethodDecl -> typeParameters type Identifier interfaceMethodDeclaratorRest.
+R119 : interfaceMethodDeclaratorRest -> voidInterfaceMethodDeclaratorRest.
+R118 : interfaceMethodDeclaratorRest -> formalParameters methodDeclaratorRest_plus_9 interfaceMethodDeclaratorFinish.
+R117 : interfaceMethodDeclaratorFinish -> 'throws' qualifiedNameList ';'.
+R116 : methodDeclaratorFinish -> 'throws' qualifiedNameList ';'.
+R115 : methodDeclaratorFinish -> 'throws' qualifiedNameList methodBody.
+R114 : voidMethodDeclaratorRest -> formalParameters methodDeclaratorFinish.
+R113 : methodDeclaratorRest -> voidMethodDeclaratorRest.
+R112 : methodDeclaratorRest -> formalParameters methodDeclaratorRest_plus_9 methodDeclaratorFinish.
+R110 : methodDeclaratorRest_plus_9 -> methodDeclaratorRest_plus_9 methodDeclaratorRest_plus_9.
+R111 : methodDeclaratorRest_plus_9 -> '[' ']'.
+R109 : interfaceMethodOrFieldDecl -> type Identifier interfaceMethodDeclaratorRest.
+R108 : interfaceMethodOrFieldDecl -> type Identifier constantDeclaratorsRest ';'.
+R107 : interfaceMemberDecl -> classDeclaration.
+R106 : interfaceMemberDecl -> interfaceDeclaration.
+R105 : interfaceMemberDecl -> 'void' Identifier voidInterfaceMethodDeclaratorRest.
+R104 : interfaceMemberDecl -> interfaceGenericMethodDecl.
+R103 : interfaceMemberDecl -> interfaceMethodOrFieldDecl.
+R102 : interfaceBodyDeclaration -> ';'.
+R101 : interfaceBodyDeclaration -> modifiers interfaceMemberDecl.
+R100 : fieldDeclaration -> type variableDeclarators ';'.
+R99 : methodDeclaration -> type Identifier methodDeclaratorRest.
+R98 : genericMethodOrConstructorDecl -> typeParameters Identifier constructorDeclaratorRest.
+R97 : genericMethodOrConstructorDecl -> typeParameters 'void' Identifier methodDeclaratorRest.
+R96 : genericMethodOrConstructorDecl -> typeParameters type Identifier methodDeclaratorRest.
+R95 : memberDecl -> classDeclaration.
+R94 : memberDecl -> interfaceDeclaration.
+R93 : memberDecl -> Identifier constructorDeclaratorRest.
+R92 : memberDecl -> 'void' Identifier voidMethodDeclaratorRest.
+R91 : memberDecl -> fieldDeclaration.
+R90 : memberDecl -> methodDeclaration.
+R89 : memberDecl -> genericMethodOrConstructorDecl.
+R88 : classBodyDeclaration -> modifiers memberDecl.
+R87 : classBodyDeclaration -> 'static' block.
+R86 : classBodyDeclaration -> ';'.
+R85 : interfaceBody -> '{' '}'.
+R84 : interfaceBody -> '{' interfaceBody_plus_8 '}'.
+R82 : interfaceBody_plus_8 -> interfaceBody_plus_8 interfaceBody_plus_8.
+R83 : interfaceBody_plus_8 -> interfaceBodyDeclaration.
+R81 : classBody -> '{' '}'.
+R80 : classBody -> '{' enumBodyDeclarations_plus_6 '}'.
+R79 : typeList -> type typeList_plus_7.
+R78 : typeList -> type.
+R76 : typeList_plus_7 -> typeList_plus_7 typeList_plus_7.
+R77 : typeList_plus_7 -> ',' type.
+R75 : normalInterfaceDeclaration -> 'interface' Identifier interfaceBody.
+R74 : normalInterfaceDeclaration -> 'interface' Identifier typeParameters interfaceBody.
+R73 : normalInterfaceDeclaration -> 'interface' Identifier typeParameters 'extends' typeList interfaceBody.
+R72 : normalInterfaceDeclaration -> 'interface' Identifier 'extends' typeList interfaceBody.
+R71 : interfaceDeclaration -> annotationTypeDeclaration.
+R70 : interfaceDeclaration -> normalInterfaceDeclaration.
+R69 : enumBodyDeclarations -> ';' enumBodyDeclarations_plus_6.
+R68 : enumBodyDeclarations -> ';'.
+R66 : enumBodyDeclarations_plus_6 -> enumBodyDeclarations_plus_6 enumBodyDeclarations_plus_6.
+R67 : enumBodyDeclarations_plus_6 -> classBodyDeclaration.
+R65 : enumConstant -> annotations Identifier classBody.
+R64 : enumConstant -> annotations Identifier arguments classBody.
+R63 : enumConstant -> annotations Identifier arguments.
+R62 : enumConstant -> annotations Identifier.
+R61 : enumConstants -> enumConstant enumConstants_plus_5.
+R60 : enumConstants -> enumConstant.
+R58 : enumConstants_plus_5 -> enumConstants_plus_5 enumConstants_plus_5.
+R59 : enumConstants_plus_5 -> ',' enumConstant.
+R57 : enumBody -> '{' '}'.
+R56 : enumBody -> '{' enumConstants '}'.
+R55 : enumBody -> '{' enumConstants ',' '}'.
+R54 : enumBody -> '{' ',' '}'.
+R53 : enumBody -> '{' ',' enumBodyDeclarations '}'.
+R52 : enumBody -> '{' enumConstants ',' enumBodyDeclarations '}'.
+R51 : enumBody -> '{' enumConstants enumBodyDeclarations '}'.
+R50 : enumBody -> '{' enumBodyDeclarations '}'.
+R49 : enumDeclaration -> ENUM Identifier enumBody.
+R48 : enumDeclaration -> ENUM Identifier 'implements' typeList enumBody.
+R47 : typeBound -> type typeBound_plus_4.
+R46 : typeBound -> type.
+R44 : typeBound_plus_4 -> typeBound_plus_4 typeBound_plus_4.
+R45 : typeBound_plus_4 -> '&' type.
+R43 : typeParameter -> Identifier 'extends' typeBound.
+R42 : typeParameter -> Identifier.
+R41 : typeParameters -> '<' typeParameter '>'.
+R40 : typeParameters -> '<' typeParameter typeParameters_plus_3 '>'.
+R38 : typeParameters_plus_3 -> typeParameters_plus_3 typeParameters_plus_3.
+R39 : typeParameters_plus_3 -> ',' typeParameter.
+R37 : normalClassDeclaration -> 'class' Identifier classBody.
+R36 : normalClassDeclaration -> 'class' Identifier typeParameters classBody.
+R35 : normalClassDeclaration -> 'class' Identifier typeParameters 'extends' type classBody.
+R34 : normalClassDeclaration -> 'class' Identifier 'extends' type classBody.
+R33 : normalClassDeclaration -> 'class' Identifier 'extends' type 'implements' typeList classBody.
+R32 : normalClassDeclaration -> 'class' Identifier typeParameters 'extends' type 'implements' typeList classBody.
+R31 : normalClassDeclaration -> 'class' Identifier typeParameters 'implements' typeList classBody.
+R30 : normalClassDeclaration -> 'class' Identifier 'implements' typeList classBody.
+R29 : classDeclaration -> enumDeclaration.
+R28 : classDeclaration -> normalClassDeclaration.
+R27 : classOrInterfaceDeclaration -> classOrInterfaceModifiers interfaceDeclaration.
+R26 : classOrInterfaceDeclaration -> classOrInterfaceModifiers classDeclaration.
+R25 : typeDeclaration -> ';'.
+R24 : typeDeclaration -> classOrInterfaceDeclaration.
+R23 : importDeclaration -> 'import' 'static' qualifiedName ';'.
+R22 : importDeclaration -> 'import' qualifiedName ';'.
+R21 : importDeclaration -> 'import' qualifiedName '.' '*' ';'.
+R20 : importDeclaration -> 'import' 'static' qualifiedName '.' '*' ';'.
+R19 : packageDeclaration -> 'package' qualifiedName ';'.
+R14 : compilationUnit -> packageDeclaration compilationUnit_plus_2.
+R13 : compilationUnit -> packageDeclaration compilationUnit_plus_1 compilationUnit_plus_2.
+R12 : compilationUnit -> packageDeclaration compilationUnit_plus_1.
+R11 : compilationUnit -> packageDeclaration.
+R10 : compilationUnit -> annotations classOrInterfaceDeclaration compilationUnit_plus_2.
+R9 : compilationUnit -> annotations classOrInterfaceDeclaration.
+R8 : compilationUnit -> annotations packageDeclaration compilationUnit_plus_2.
+R7 : compilationUnit -> annotations packageDeclaration compilationUnit_plus_1 compilationUnit_plus_2.
+R6 : compilationUnit -> annotations packageDeclaration compilationUnit_plus_1.
+R5 : compilationUnit -> annotations packageDeclaration.
+R3 : compilationUnit_plus_2 -> compilationUnit_plus_2 compilationUnit_plus_2.
+R4 : compilationUnit_plus_2 -> typeDeclaration.
+R1 : compilationUnit_plus_1 -> compilationUnit_plus_1 compilationUnit_plus_1.
+R2 : compilationUnit_plus_1 -> importDeclaration.
+
+
+
+
+Vars
+
+ x2 x1 x0
+
+Rules
+
+R453(R453(x0, x1), x2) -> R453(x0, R453(x1, x2))
+R424(R424(x0, x1), x2) -> R424(x0, R424(x1, x2))
+R415(R415(x0, x1), x2) -> R415(x0, R415(x1, x2))
+R408(R408(x0, x1), x2) -> R408(x0, R408(x1, x2))
+R399(R399(x0, x1), x2) -> R399(x0, R399(x1, x2))
+R391(R391(x0, x1), x2) -> R391(x0, R391(x1, x2))
+R385(R385(x0, x1), x2) -> R385(x0, R385(x1, x2))
+R379(R379(x0, x1), x2) -> R379(x0, R379(x1, x2))
+R375(R375(x0, x1), x2) -> R375(x0, R375(x1, x2))
+R371(R371(x0, x1), x2) -> R371(x0, R371(x1, x2))
+R367(R367(x0, x1), x2) -> R367(x0, R367(x1, x2))
+R363(R363(x0, x1), x2) -> R363(x0, R363(x1, x2))
+R341(R341(x0, x1), x2) -> R341(x0, R341(x1, x2))
+R324(R324(x0, x1), x2) -> R324(x0, R324(x1, x2))
+R321(R321(x0, x1), x2) -> R321(x0, R321(x1, x2))
+R315(R315(x0, x1), x2) -> R315(x0, R315(x1, x2))
+R264(R264(x0, x1), x2) -> R264(x0, R264(x1, x2))
+R255(R255(x0, x1), x2) -> R255(x0, R255(x1, x2))
+R247(R247(x0, x1), x2) -> R247(x0, R247(x1, x2))
+R238(R238(x0, x1), x2) -> R238(x0, R238(x1, x2))
+R223(R223(x0, x1), x2) -> R223(x0, R223(x1, x2))
+R213(R213(x0, x1), x2) -> R213(x0, R213(x1, x2))
+R202(R202(x0, x1), x2) -> R202(x0, R202(x1, x2))
+R194(R194(x0, x1), x2) -> R194(x0, R194(x1, x2))
+R180(R180(x0, x1), x2) -> R180(x0, R180(x1, x2))
+R156(R156(x0, x1), x2) -> R156(x0, R156(x1, x2))
+R152(R152(x0, x1), x2) -> R152(x0, R152(x1, x2))
+R148(R148(x0, x1), x2) -> R148(x0, R148(x1, x2))
+R141(R141(x0, x1), x2) -> R141(x0, R141(x1, x2))
+R132(R132(x0, x1), x2) -> R132(x0, R132(x1, x2))
+R126(R126(x0, x1), x2) -> R126(x0, R126(x1, x2))
+R110(R110(x0, x1), x2) -> R110(x0, R110(x1, x2))
+R82(R82(x0, x1), x2) -> R82(x0, R82(x1, x2))
+R76(R76(x0, x1), x2) -> R76(x0, R76(x1, x2))
+R66(R66(x0, x1), x2) -> R66(x0, R66(x1, x2))
+R58(R58(x0, x1), x2) -> R58(x0, R58(x1, x2))
+R44(R44(x0, x1), x2) -> R44(x0, R44(x1, x2))
+R38(R38(x0, x1), x2) -> R38(x0, R38(x1, x2))
+R3(R3(x0, x1), x2) -> R3(x0, R3(x1, x2))
+R1(R1(x0, x1), x2) -> R1(x0, R1(x1, x2))
+
+
+ 

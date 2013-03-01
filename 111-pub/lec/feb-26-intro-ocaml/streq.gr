@@ -1,0 +1,17 @@
+streq
+
+Start
+
+eqs
+
+Syntactic
+
+eqs -> eq +.
+
+eq -> lhs '=' rhs '\n' .
+
+Lexical
+
+lhs -> ['a'-'b']+.
+rhs -> ['a'-'b']+.
+

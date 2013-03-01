@@ -1,0 +1,24 @@
+balparen
+
+Start
+
+s1
+
+Whitespace
+
+ws
+
+Syntactic
+
+s1 -> s ws? .
+
+s -> '(' s ')' .
+s -> .
+s -> s s .
+
+Lexical 
+
+ws -> '\n'.
+ws -> '\t'. 
+ws -> space. 
+ws -> ws ws. 

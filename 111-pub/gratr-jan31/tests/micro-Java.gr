@@ -1,0 +1,33 @@
+micro
+
+Start
+
+typeParameters_plus_11
+
+Whitespace
+
+ws
+
+Syntactic
+
+R64 : typeParameter -> Identifier.
+R63 : typeParameter -> Identifier typeParameter_12.
+R62 : typeParameter_12 -> 'extends' typeBound.
+R58 : typeParameters_plus_11 -> typeParameters_plus_11 typeParameters_plus_11.
+R59 : typeParameters_plus_11 -> typeParameters_10.
+R57 : typeParameters_10 -> ',' typeParameter.
+
+Lexical 
+
+ws -> '\t' .
+ws -> '\n' .
+ws -> space .
+ws -> ws ws .
+
+Vars
+
+ x2 x1 x0
+
+Rules
+
+R58(R58(x0, x1), x2) -> R58(x0, R58(x1, x2))

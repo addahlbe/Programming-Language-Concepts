@@ -1,0 +1,12 @@
+q1
+
+Start 
+
+s
+
+Lexical
+
+s -> (('a' | 'b')+ 'c')+ '\n'?.
+
+% the ('\n')? at the end is to match a newline that might accidentally
+% be written to your sample file.

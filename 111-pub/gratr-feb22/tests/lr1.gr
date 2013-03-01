@@ -1,0 +1,17 @@
+lr1
+
+Start
+
+s
+
+Syntactic
+
+s -> term '=' term .
+s -> tp '.' .
+
+term -> id .
+tp -> id .
+
+Lexical
+
+id -> 'a' + .

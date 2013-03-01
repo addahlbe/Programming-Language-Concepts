@@ -1,0 +1,24 @@
+lam
+
+Start
+
+term
+
+Productions
+
+Lam : term -> '\\' id ':' tp '.' term .
+Var : term -> id .
+Base : tp -> id .
+Arrow : tp -> tp '->' tp .
+
+Vars
+
+w x y z 
+
+Rules
+
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+
+dot(tp(Base), x) -> dot(term(Var), x)
+
+

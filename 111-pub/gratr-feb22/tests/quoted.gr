@@ -1,0 +1,23 @@
+quoted
+
+Start
+
+q
+
+Productions
+
+Quote : q -> '\'' l '\'' .
+Letters : l -> l l .
+Letter : l -> c.
+
+A : c -> 'a'.
+B : c -> 'b'.
+
+Vars
+
+w x y z ww zz
+
+Rules
+
+Else(If(x), y) -> If(Else(x,y))
+Else(Else(x, y), z) -> Else(x,Else(y,z))

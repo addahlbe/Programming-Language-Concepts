@@ -1,0 +1,42 @@
+% Typed expressions.
+texpr
+
+Start
+
+exp
+
+%Whitespace
+
+%ws
+
+Syntactic
+
+Var:    exp -> ws id .
+App:    exp -> exp exp .
+Annot:  exp -> '(' exp ':' tp ')' .
+Paren:  exp -> '(' exp ')' .
+
+Base:   tp -> ws id .
+Arrow:  tp -> tp '->' tp .
+TApp:   tp -> tp tp .
+TParen: tp -> '(' tp ')' .
+
+Lexical 
+
+%ws => '\t' .
+%ws => '\n' .
+ws => space .
+%ws => ws ws .
+
+id -> [ 'x' - 'z' ] + .
+
+Vars
+
+x y z
+
+Rules
+App(x,App(y,z)) -> App(App(x,y),z)
+TApp(x,TApp(y,z)) -> TApp(TApp(x,y),z)
+Arrow(Arrow(x,y),z) -> Arrow(x,Arrow(y,z))
+TApp(x,Arrow(y,z)) -> Arrow(TApp(x,y),z)
+TApp(Arrow(x,y),z) -> Arrow(x,TApp(y,z))

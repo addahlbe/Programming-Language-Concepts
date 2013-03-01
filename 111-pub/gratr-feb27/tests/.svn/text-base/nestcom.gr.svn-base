@@ -1,0 +1,32 @@
+nestcom
+
+Start
+
+ids
+
+Whitespace
+
+ws
+
+Syntactic
+
+ids -> ( id ) + .
+
+Lexical 
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+ws => nestcom .
+
+nestcom => '(*' nestcoma '*)'.
+nestcoma => ~ ['*' '('] nestcoma.
+nestcoma => '*' nestcomb.
+nestcomb => ~ [')'] nestcoma.
+nestcoma => '(' nestcomc.
+nestcomc => ~['*']nestcoma.
+nestcomc => '*' nestcom '*)'.
+
+
+id -> [ 'a' - 'c' ] + .

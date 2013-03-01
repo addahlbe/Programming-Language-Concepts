@@ -1,0 +1,13 @@
+(VAR x3 x2 x1 x0)
+
+(RULES
+
+dot(a, x0) -> dot(S(A), x0)
+dot(S(x0), dot(a, x1)) -> dot(S(B(x0)), x1)
+dot(S(x1), dot(S(x2), x3)) -> dot(S(combine(x1, x2)), x3)
+combine(combine(x1, x2), x3) -> combine(x1, combine(x2, x3))
+combine(A, x1) -> B(x1)
+combine(x1, A) -> B(x1)
+combine(B(x1), x2) -> B(combine(x1, x2))
+combine(x1, B(x2)) -> B(combine(x1, x2))
+)

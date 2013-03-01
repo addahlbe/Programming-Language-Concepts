@@ -1,0 +1,33 @@
+ifelse
+
+Whitespace
+
+ws
+
+Syntactic
+
+% saturated if-then-else expressions
+
+start -> sos s eos .
+
+IfElse : s -> if s else s .
+If : s -> if s .
+B : s -> b .
+
+Lexical
+
+if => 'if' .
+else => 'else'.
+b => 'b'.
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+Vars
+
+x y 
+
+Rules
+
+IfElse(If(x), y) -> If(IfElse(x, y))

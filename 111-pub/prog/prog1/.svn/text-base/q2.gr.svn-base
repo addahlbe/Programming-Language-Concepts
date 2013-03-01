@@ -1,0 +1,14 @@
+q2
+
+Start 
+
+num
+
+Lexical
+
+% the next two lines define nonzero and digit, respectively: 
+nonzero -> ['1' - '9'] .
+digit -> '0' | nonzero .
+
+%this defines num
+num -> nonzero digit digit ( ',' digit digit digit )+ '\n'?.

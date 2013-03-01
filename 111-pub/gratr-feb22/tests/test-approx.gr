@@ -1,0 +1,19 @@
+frag
+
+Start
+
+S
+
+Productions
+
+1 : S -> s A .
+2 : A -> a B .
+3 : B -> b C .
+4 : C -> C C .
+5 : C -> D c .
+5 : D -> d A .
+
+Vars
+
+Rules
+

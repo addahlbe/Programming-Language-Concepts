@@ -1,0 +1,19 @@
+balparens
+
+Start
+
+s
+
+Productions
+
+0 : s -> '(' ')' .
+1 : s -> '(' s ')' .
+2 : s -> s s.
+
+Vars
+
+x y z
+
+Rules
+
+2(2(x,y),z) -> 2(x,2(y,z))

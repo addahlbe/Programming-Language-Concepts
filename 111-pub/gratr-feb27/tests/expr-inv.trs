@@ -1,0 +1,15 @@
+(VAR x0 x1 x2 x y z)
+(RULES
+dot(expr(Plus(x0, x1)), x2) -> dot(expr(x0), dot('+', dot(expr(x1), x2))) 
+dot(expr(Times(x0, x1)), x2) -> dot(expr(x0), dot('*', dot(expr(x1), x2))) 
+dot(expr(Id), x0) -> dot(id, x0) 
+dot(expr(Parens(x0)), x1) -> dot(lp, dot(expr(x0), dot(rp, x1))) 
+
+
+
+
+Plus(x,Plus(y,z)) -> Plus(Plus(x,y),z) 
+Times(x,Times(y,z)) -> Times(Times(x,y),z) 
+Plus(x,Times(y,z)) -> Times(Plus(x,y),z) 
+Plus(Times(x,y),z) -> Times(x,Plus(y,z))
+) 

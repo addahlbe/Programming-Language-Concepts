@@ -1,0 +1,38 @@
+To compile gratr, go to the gratr subdirectory, and run either
+
+-- make, if you are on Mac or Linux
+-- compile, if you are on Windows (do this from the cmd shell, in
+   that directory)
+
+----------------------------------------------------------------------
+To run gratr on Windows, copy gratr to the directory where you want to
+run it (on mini1.gr, say), and then do the following from the cmd
+shell:
+
+gratr --lang-only mini1.gr
+
+This will generate GraphViz files (see below).
+
+To run the automaton on the sequence of characters in a test file
+called q1.txt, do
+
+gratr --run q1.txt --lang-only mini1.gr
+
+On Mac/Linux, this is similar, except you can just use gratr (generated
+by make), and you might need to call
+
+./gratr
+
+instead of 
+
+gratr
+
+----------------------------------------------------------------------
+You can process GraphViz files to generate nice-looking renditions
+of automata.  To run dot on min.gv to create a min.jpg:
+
+dot -Tjpeg -o min.jpg min.gv
+
+(On Windows you would do this in the cmd shell, or on Linux/Mac from a
+terminal.)
+

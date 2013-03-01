@@ -1,0 +1,39 @@
+expr
+
+Start
+
+expr
+
+Whitespace
+
+ws
+
+Syntactic
+
+Plus : expr -> expr '+' expr .
+Times : expr -> expr '*' expr .
+Id : expr -> id .
+Num : expr -> num .
+Parens : expr -> '(' expr ')' .
+
+Lexical 
+
+ws => '\t' .
+ws => '\n' .
+ws => space .
+ws => ws ws .
+
+num -> ['0' - '9']+ .
+id -> [ 'x' - 'z' ] + .
+
+Vars
+
+x y z
+
+Rules
+
+Plus(Plus(x,y),z) -> Plus(x,Plus(y,z))
+Times(Times(x,y),z) -> Times(x,Times(y,z))
+Times(Plus(x,y),z) -> Plus(x,Times(y,z))
+Times(x,Plus(y,z)) -> Plus(Times(x,y),z)
+

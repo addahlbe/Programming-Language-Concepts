@@ -1,0 +1,12 @@
+numcomma
+
+Start
+
+num
+
+Lexical 
+
+nonzero -> ['1' - '2'] .
+digit -> '0' | nonzero .
+
+num -> (nonzero | nonzero digit | nonzero digit digit) ( ',' digit digit digit )* .

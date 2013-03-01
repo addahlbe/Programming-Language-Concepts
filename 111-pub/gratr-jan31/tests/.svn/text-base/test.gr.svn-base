@@ -1,0 +1,21 @@
+q3
+
+Start 
+
+s
+
+Syntactic
+
+s -> expr 'e'.
+s -> expr 'f'.
+
+expr -> expr1 'c' expr2 .
+expr -> expr2 'd' expr1 .
+
+expr1 -> 'a' expr1 'b'.
+expr1 -> 'b' expr1 'a'.
+expr1 -> .
+
+expr2 -> 'a' expr2 'a'.
+expr2 -> 'b' expr2 'b'.
+expr2 -> .

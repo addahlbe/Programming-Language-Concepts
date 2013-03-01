@@ -1,0 +1,36 @@
+expr
+
+Start Already
+
+start_
+
+Syntactic
+
+Start_ : start_ -> sos top eos.
+Top : top -> classBody.
+Top_1 : top -> interfaceBody.
+Topa : top -> braceSemis | '{}'.
+ClassBody_1 : semis -> ';'.
+ClassBody_2 : semis -> semis semis.
+ClassBody_3 : classBody_subseqh_1 -> modifiers memberDecl semis.
+ClassBody_4 : classBody_subseqh_1 -> modifiers memberDecl classBody_subseqh_1.
+ClassBody_5 : classBody_subseqh_1 -> 'static' block semis.
+ClassBody_6 : classBody_subseqh_1 -> 'static' block classBody_subseqh_1.
+ClassBody_7 : classBody_subseqh_1 -> ';' classBody_subseqh_1.
+ClassBody : classBody -> '{' classBody_subseqh_1 '}'.
+BraceSemis : braceSemis -> '{' semis '}'.
+InterfaceBody_1 : interfaceBody_subseqh_3 -> modifiers interfaceMemberDecl semis.
+InterfaceBody_2 : interfaceBody_subseqh_3 -> modifiers interfaceMemberDecl interfaceBody_subseqh_3.
+InterfaceBody_3 : interfaceBody_subseqh_3 -> ';' interfaceBody_subseqh_3.
+InterfaceBody_4 : interfaceBody_subseq_4 -> interfaceBody_subseqh_3.
+InterfaceBody_5 : interfaceBody_subseq_4 -> semis.
+InterfaceBody : interfaceBody -> '{' interfaceBody_subseqh_3 '}'.
+
+
+Vars
+
+ x2 x1 x0
+
+Rules
+
+ClassBody_2(ClassBody_2(x0, x1), x2) -> ClassBody_2(x0, ClassBody_2(x1, x2))

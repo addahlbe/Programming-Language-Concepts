@@ -1,0 +1,20 @@
+expr
+
+Productions
+
+1 : expr -> id .
+3 : expr -> id plus expr .
+
+Vars
+
+x y z
+
+Rules
+
+dot(expr(x),dot(plus,dot(expr(y),z))) -> dot(expr(un3(x,y)),z)
+
+un3(1,y) -> 3(y)
+un3(y,1) -> 3(y)
+un3(3(x),y) -> 3(un3(x,y))
+un3(x,3(y)) -> 3(un3(x,y))
+un3(un3(x,y),z) -> un3(x,un3(y,z))

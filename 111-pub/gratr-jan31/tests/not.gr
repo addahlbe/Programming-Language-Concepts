@@ -1,0 +1,23 @@
+not
+
+% because we only look one symbol ahead when applying
+% run-rewriting rules which change the ending state of
+% the partial run they rewrite, we cannot tell that
+% the following grammar is unambiguous.  
+%
+% The definitions of expr1 and expr2 are designed so
+% that they will be approximated the same way by the
+% automaton we construct.
+
+Start
+
+expr
+
+Syntactic
+
+expr -> expr1 '!'.
+expr -> expr2 '!!'.
+
+expr1 -> 'c'.
+
+expr2 -> 'c'.
